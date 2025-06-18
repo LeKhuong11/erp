@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_employee_view_form_inherit_custom" model="ir.ui.view">
+        <field name="name">hr.employee.form.inherit.custom</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='company_country_code']" position="after">
+                <field name="timekeeping_code" string="Mã chấm công"/>
+                <field name="customer_id" string="Mã khách hàng"/>
+                <field name="tax_code"  string="Mã số thuế"/>
+                <field name="medical_insurance_id" string="Số sổ BHYT"/>
+            </xpath>
+
+            <xpath expr="//field[@name='job_id']" position="after">
+        
+            </xpath>
+
+            <xpath expr="//field[@name='identification_id']" position="after">
+                <field name="cccd" string="Số CCCD"/>
+                <field name="issue_date_id_card" string="Ngày cấp CCCD"/>
+                <field name="issue_place_id_card" string="Nơi cấp CCCD"/>
+                <field name="cccd_front_image" widget="image"  style="width: 100px; height: 100px;"  string="Ảnh CCCD mặt trước" options='{"zoom": true, "preview_image":"cccd_front_image"}'/>
+                <field name="cccd_back_image" widget="image"  style="width: 100px; height: 100px;"  string="Ảnh CCCD mặt sau" options='{"zoom": true, "preview_image":"cccd_back_image"}'/>
+            </xpath>
+
+            <xpath expr="//page[@name='personal_information']/group/group[1]" position="before">
+                <group string="Thông tin">
+                    <field name="ethnicity" string="Dân tộc"/>
+                    <field name="religion" string="Tôn giáo"/> 
+                    <field name="hometown" string="Quê quán"/>
+                    <field name="permanent_address" string="Địa chỉ thường trú"/>
+                    <field name="current_address" string="Địa chỉ hiện tại"/>
+                    <field name="start_date" string="Ngày bắt vào làm"/>
+                    <field name="official_date" string="Ngày chính thức"/>
+                    <field name="education_level" string="Trình độ học vấn"/>
+                    <field name="major" string="Chuyên ngành"/>
+                    <field name="it_level" string="Trình độ tin học"/>
+                    <field name="language_level" string="Trình độ ngoại ngữ"/>
+                </group>
+            </xpath>
+        </field> 
+    </record>
+</odoo>
