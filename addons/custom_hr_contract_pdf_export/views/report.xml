@@ -1,0 +1,12 @@
+<!-- custom_hr_contract_pdf_export/views/report.xml -->
+<odoo>
+  <report
+    id="action_hr_contract_pdf"
+    model="hr.contract"
+    string="Hợp đồng lao động"
+    report_type="qweb-pdf"
+    name="custom_hr_contract_pdf_export.report_hr_contract_pdf"
+    file="custom_hr_contract_pdf_export.report_hr_contract_pdf"
+    print_report_name="Contract - %s' % (object.employee_id.name)"
+  />
+</odoo>
