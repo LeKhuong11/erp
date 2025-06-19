@@ -1,0 +1,18 @@
+<odoo>
+  <record id="view_hr_contract_form_inherit_pdf_button_body" model="ir.ui.view">
+    <field name="name">hr.contract.form.inherit.pdf.button.body</field>
+    <field name="model">hr.contract</field>
+    <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+    <field name="arch" type="xml">
+      
+      <sheet position="inside">
+        <div class="oe_button_box" name="custom_print_contract_box">
+          <button name="export_contract_pdf"
+                  type="object"
+                  class="btn btn-primary"
+                  string="In hợp đồng"/>
+        </div>
+      </sheet>
+    </field>
+  </record>
+</odoo>
