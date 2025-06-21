@@ -14,9 +14,15 @@
     """,
     'data': [
         'views/hr_contract_view.xml',                # nếu bạn có custom view thêm nút
-        'report/hr_contract_report_template.xml',    # template QWeb
-        'report/report.xml',                         # khai báo <report>
+        'reports/hr_contract_report_template.xml',    # template QWeb
+        'reports/report.xml',                         # khai báo <report>
+        # 'reports/header_template.xml',                # template header
     ],
+    'assets': {
+        'web.report_assets_common': [
+            'custom_export_contract/static/src/css/style.css',
+        ],
+    },
     'installable': True,
     'auto_install': False,
     'application': False,

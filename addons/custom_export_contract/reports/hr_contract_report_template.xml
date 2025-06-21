@@ -1,0 +1,37 @@
+<odoo>
+    <template id="report_contract_document" name="New Contract Document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+              <div class="container">
+                <header>
+                    <div class="header">
+                        <h2>CÔNG TY TNHH CUNG ỨNG NHÂN LỰC NHÂN KIỆT</h2>
+                        <p><strong>NGƯỜI LAO ĐỘNG:</strong> <span t-field="o.employee_id.name"/></p>
+                        <p>Salary: <span t-field="o.wage"/></p>
+                        <p>Generated on: <span t-esc="datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')"/></p>
+                    </div>
+                    <hr />
+                </header>
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="oe_structure"/>
+                        <h2>Expense Report</h2>
+                        <br></br>
+                        <h2>Contract Information</h2>
+                        <p><strong>Employee Name:</strong> <span t-field="o.employee_id.name"/></p>
+                        <p><strong>Department:</strong> <span t-field="o.employee_id.department_id.name"/></p>
+                        <p><strong>Contract Start Date:</strong> <span t-field="o.date_start"/></p>
+                        <p><strong>Contract End Date:</strong> <span t-field="o.date_end"/></p>
+                        <p><strong>Salary:</strong> <span t-field="o.wage"/></p>
+                    </div>
+                </t>
+                <footer>
+                    <div class="footer">
+                        <p>Powered by My Company</p>
+                    </div>
+                </footer>
+              </div>
+            </t>
+        </t>
+    </template>
+</odoo>
