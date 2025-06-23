@@ -20,7 +20,7 @@
     ],
     'assets': {
         'web.report_assets_common': [
-            'custom_export_contract/static/src/css/style.css',
+            'custom_export_contract/static/src/css/style.scss',
         ],
     },
     'installable': True,
