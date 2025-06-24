@@ -7,49 +7,80 @@ body {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    background-color: #c20e37;
+
+    .text-blue {
+        color: #3333ff;
+    }
 }
 
 
 .header {
-    text-align: center;
+    margin: 0;
+    padding: 0;
 
-    h2 {
-        font-size: 20px;
+    .header-content {
         text-align: center;
-        color: #c20e37;
+        border-bottom: #c20e37 solid 2px;
+
+        h2 {
+            font-size: 20px;
+            text-align: center;
+            color: #c20e37;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        p {
+            font-size: 14px;
+            color: #1f008f;
+            margin: 0;
+        }
     }
 
-    p {
-        font-size: 14px;
-        margin: 5px 0;
-        color: #1f008f;
+    .header-title {
+        h2, span {
+            font-family: 'Times New Roman', Times, serif;
+            color: #3333ff;
+            font-weight: 600;
+            margin: 0;
+        }
+    }
+
+}
+
+
+.contract-report {
+    .page {
+        margin: 0 -60px;
+    }
+
+    .page h2 {
+        font-size: 17px;
+        font-weight: 600;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .page p {
+        font-size: 15px;
+        margin: 1px 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .represent {
+
+    }
+
+    .employee {
+
     }
 }
 
 
-.font-weight-bold {
-    font-weight: bold;
-}
-
-
-.page {
-    margin: 20px 0;
-}
-
-.page h2 {
-    font-size: 20px;
-}
-
-.page p {
-    font-size: 14px;
-    margin: 10px 0;
-}
-
-.footer {
-    text-align: center;
-    font-size: 12px;
-    color: gray;
-    margin-top: 20px;
-    position: relative;
-}
+    .footer {
+        text-align: center;
+        font-size: 12px;
+        color: gray;
+        margin-top: 20px;
+        position: relative;
+    }

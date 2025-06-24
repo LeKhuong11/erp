@@ -2,27 +2,65 @@
     <template id="report_contract_document" name="New Contract Document">
         <t t-call="web.html_container">
             <t t-foreach="docs" t-as="o">
-                <div class="container contract-report">
+                <div class="container">
                     <header>
                         <div class="header">
-                            <h2 class="fs-4">CÔNG TY TNHH CUNG ỨNG NHÂN LỰC NHÂN KIỆT</h2>
-                            <p>Số 57 Lê Thị Hồng Gấm, P. Nguyễn Thái Bình, Quận 1, TP. HCM</p>
-                            <div>
-                                <p><strong>Email:</strong> <span>info@nhankiet.vn</span></p>
-                                <p><strong>Tel:</strong> <span>028.3505 4224</span></p>
+                            <div class="header-content d-flex justify-content-between align-items-center">
+                                <div class="logo ">
+                                    <img t-att-src="'/custom_export_contract/static/src/images/logo-nk.jpg'" style="width: 135px;"/>
+                                </div>
+                                <div>
+                                    <h2 class="fs-4">CÔNG TY TNHH CUNG ỨNG NHÂN LỰC NHÂN KIỆT</h2>
+                                    <p class="text-left fs-5">Số 57 Lê Thị Hồng Gấm, P. Nguyễn Thái Bình, Quận 1, TP. HCM</p>
+                                    <div class="d-flex justify-content-between">
+                                        <p><strong class="text-decoration-underline">Email:</strong> <span>info@nhankiet.vn</span></p>
+                                        <p><strong class="text-decoration-underline">Website:</strong> <span>www.nhankiet.vn</span></p>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <p><strong class="text-decoration-underline">Tel:</strong> <span>028.3505 4224</span></p>
+                                        <p><strong class="text-decoration-underline">VP HCM:</strong> <span>028.3821 3955</span></p>
+                                        <p><strong class="text-decoration-underline">VP Hà Nội:</strong> <span>024.3763 3119</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-title d-flex justify-content-center mt-3">
+                                <div class="text-center">
+                                    <h2 class="fs-4">HỢP ĐỒNG LAO ĐỘNG</h2>
+                                    <p>Số: <span>654668879</span></p>
+                                </div>
                             </div>
                         </div>
                         <hr />
                     </header>
                     <t t-call="web.external_layout">
-                        <div class="page">
-                            <h2 class="text-success fs-4 font-weight-bold">Expense Report</h2>
-                            <br></br>
-                            <p><strong>Employee Name:</strong> <span t-field="o.employee_id.name"/></p>
-                            <p><strong>Department:</strong> <span t-field="o.employee_id.department_id.name"/></p>
-                            <p><strong>Contract Start Date:</strong> <span t-field="o.date_start"/></p>
-                            <p><strong>Contract End Date:</strong> <span t-field="o.date_end"/></p>
-                            <p><strong>Salary:</strong> <span t-field="o.wage"/></p>
+                        <div class="contract-report">
+                            <div class="page">
+                                <div class="represent mb-3">
+                                    <h2>CÔNG TY TNHH CUNG ỨNG NHÂN LỰC NHÂN KIỆT</h2>
+                                    <h2>(Gọi tắt là "Nhân Kiệt")</h2>
+                                    <p><strong>Địa chỉ:</strong> <span>Địa chỉ : 57 Lê Thị Hồng Gấm, P. Nguyễn Thái Bình, Quận 1, Hồ Chí Minh</span></p>
+                                    <div class="d-flex">
+                                        <p><strong>Người đại diện:</strong> <span>Đỗ Huy Lê</span></p>
+                                        <p class="px-4"><strong>Chức vụ:</strong> <span>Tổng giám đốc</span></p>
+                                    </div>
+                                    <p><strong class="text-danger">Giấy ủy quyền số:</strong> <span>Công ty TNHH Cung Ứng Nhân Lực Nhân Kiệt</span></p>
+                                </div>  
+                                <div class="employee">
+                                    <div class="d-flex">
+                                        <p><strong>NGƯỜI LAO ĐỘNG</strong>: <span t-field="o.employee_id.name"/></p>
+                                        <p class="px-4">Quốc tịch: <span t-field="o.employee_id.country_id.name"/></p>
+                                    </div>
+                                    <div class="d-flex">
+                                        <p>Năm sinh: <span t-field="o.employee_id.birthday"/></p>
+                                        <p class="px-4">Giới tính: <span t-field="o.employee_id.gender"/></p>
+                                    </div>
+                                    <p>Địa chỉ thường trú: <span t-field="o.employee_id.permanent_address"/></p>
+                                    <p>Số CMND/CCCD/HC: <span t-field="o.employee_id.cccd" />. Ngày: <span t-field="o.employee_id.issue_date_id_card"/>. Tại: <span t-field="o.employee_id.issue_place_id_card"/></p>
+                                    <p>Hai bên cùng thoả thuận ký kết <span class="text-blue">hợp đồng lao động</span> một dạng hợp đồng mà Người lao động làm việc và chịu sự quản lý, điều hành bởi <span class="text-blue">Công ty khách hàng</span> theo hợp đồng <span class="text-danger" t-field="o.name" /> ký với người sử dụng lao động với những điều khoản sau đây:</p>
+                                </div>
+                                <!-- <p><strong>Contract End Date:</strong> <span t-field="o.date_end"/></p>
+                                <p><strong>Salary:</strong> <span t-field="o.wage"/></p> -->
+                            </div>
                         </div>
                     </t>
                     <footer>
