@@ -6,7 +6,7 @@
                     <div class="header-section">
                         <div class="header-content d-flex justify-content-between">
                             <div class="logo ">
-                                <img t-att-src="'/custom_export_contract/static/src/images/logo-nk.jpg'" style="width: 145px;"/>
+                                <img t-att-src="'/custom_export_contract/static/src/images/logo-nk.jpg'" style="width: 155px;"/>
                             </div>
                             <div>
                                 <h2 class="font-weight-bold">CÔNG TY TNHH CUNG ỨNG NHÂN LỰC NHÂN KIỆT</h2>
