@@ -1,0 +1,112 @@
+.o_notification_manager {
+    .o_notification {
+        border-radius: 8px !important;
+        animation: antSlideRightIn 0.3s cubic-bezier(0.23, 1, 0.32, 1) !important;
+        background: #fff !important;
+
+        .border {
+            border: none !important;
+        }
+
+        &>div {
+            border-radius: 8px !important;
+            border: none !important;
+            box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+                0 3px 6px -4px rgba(0, 0, 0, 0.12),
+                0 9px 28px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        &.o_notification_success {
+            background: #f6ffed !important;
+
+            .o_notification_title {
+                color: #52c41a !important;
+            }
+
+            .o_notification_content {
+                color: rgba(0, 0, 0, 0.85) !important;
+            }
+        }
+
+        &.o_notification_danger {
+            background: #fff2f0 !important;
+
+            .o_notification_title {
+                color: #ff4d4f !important;
+            }
+
+            .o_notification_content {
+                color: rgba(0, 0, 0, 0.85) !important;
+            }
+        }
+
+        &.o_notification_warning {
+            background: #fffbe6 !important;
+
+            .o_notification_title {
+                color: #faad14 !important;
+            }
+
+            .o_notification_content {
+                color: rgba(0, 0, 0, 0.85) !important;
+            }
+        }
+
+        &.o_notification_info {
+            background: #e6f4ff !important;
+
+            .o_notification_title {
+                color: #1677ff !important;
+            }
+
+            .o_notification_content {
+                color: rgba(0, 0, 0, 0.85) !important;
+            }
+        }
+
+        .o_notification_title {
+            margin: 0 !important;
+            padding: 0 !important;
+            font-size: 16px !important;
+            line-height: 24px !important;
+            font-weight: 600 !important;
+        }
+
+        .o_notification_content {
+            font-size: 14px !important;
+            line-height: 22px !important;
+            margin-top: 8px !important;
+
+            ul {
+                margin: 0 !important;
+                padding-left: 20px !important;
+            }
+
+            li {
+                line-height: 22px !important;
+            }
+        }
+
+        .o_notification_bar {
+            display: none !important;
+        }
+
+        &>div {
+            // padding: 24px 20px !important;
+        }
+
+    }
+}
+
+@keyframes antSlideRightIn {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,113 @@
+.o_loading {
+    // Base styles
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+
+    // Loading dots
+    .o_loading_dots {
+        position: relative;
+        display: inline-flex;
+        gap: 6px;
+
+        span {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #1677ff;
+            animation: antLoadingMove 1s infinite linear;
+
+            .dark-mode & {
+                background-color: #1668dc;
+            }
+
+            &:nth-child(2) {
+                animation-delay: 0.2s;
+            }
+
+            &:nth-child(3) {
+                animation-delay: 0.4s;
+            }
+        }
+    }
+
+    // Loading text
+    .o_loading_text {
+        padding-left: 12px;
+        color: rgba(0, 0, 0, 0.88);
+
+        .dark-mode & {
+            color: rgba(255, 255, 255, 0.85);
+        }
+    }
+
+    // Size variants
+    &.o_loading_sm {
+        font-size: 12px;
+        .o_loading_dots {
+            gap: 4px;
+            span {
+                width: 6px;
+                height: 6px;
+            }
+        }
+    }
+
+    &.o_loading_lg {
+        font-size: 16px;
+        .o_loading_dots {
+            gap: 8px;
+            span {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    }
+}
+
+// Loading animation
+@keyframes antLoadingMove {
+    0% {
+        transform: scale(0.75);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.75);
+        opacity: 0.5;
+    }
+}
+
+// Fullscreen loading
+.o_loading_fullscreen {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    .dark-mode & {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .o_loading {
+        padding: 24px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+
+        .dark-mode & {
+            background-color: #141414;
+        }
+    }
+}

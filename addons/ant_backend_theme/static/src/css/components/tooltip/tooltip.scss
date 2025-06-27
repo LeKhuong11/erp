@@ -1,0 +1,111 @@
+// Tooltip styles based on Ant Design v5
+.o_tooltip {
+    --tooltip-bg-light: rgba(0, 0, 0, 0.85);
+    --tooltip-bg-dark: rgba(255, 255, 255, 0.85);
+    --tooltip-arrow-size: 8px;
+    --tooltip-distance: 6px;
+
+    // Base styles
+    position: absolute;
+    z-index: 1070;
+    display: block;
+    max-width: 250px;
+    visibility: visible;
+    font-size: 14px;
+    line-height: 1.5;
+
+    // Container
+    .o_tooltip_content {
+        min-width: 30px;
+        min-height: 32px;
+        padding: 6px 8px;
+        color: #fff;
+        text-align: start;
+        text-decoration: none;
+        word-wrap: break-word;
+        background-color: var(--tooltip-bg-light);
+        border-radius: 6px;
+        box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+
+        // Dark mode
+        .dark-mode & {
+            color: rgba(0, 0, 0, 0.88);
+            background-color: var(--tooltip-bg-dark);
+        }
+    }
+
+    // Arrow
+    .o_tooltip_arrow {
+        position: absolute;
+        width: var(--tooltip-arrow-size);
+        height: var(--tooltip-arrow-size);
+        background: inherit;
+
+        &::before {
+            position: absolute;
+            width: var(--tooltip-arrow-size);
+            height: var(--tooltip-arrow-size);
+            background-color: var(--tooltip-bg-light);
+            content: '';
+            pointer-events: none;
+            transform: rotate(45deg);
+
+            .dark-mode & {
+                background-color: var(--tooltip-bg-dark);
+            }
+        }
+    }
+
+    // Placement modifiers
+    &.bs-tooltip-top {
+        padding-bottom: var(--tooltip-distance);
+        .o_tooltip_arrow {
+            bottom: 0;
+            &::before {
+                box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.07);
+            }
+        }
+    }
+
+    &.bs-tooltip-bottom {
+        padding-top: var(--tooltip-distance);
+        .o_tooltip_arrow {
+            top: 0;
+            &::before {
+                box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.06);
+            }
+        }
+    }
+
+    &.bs-tooltip-start {
+        padding-right: var(--tooltip-distance);
+        .o_tooltip_arrow {
+            right: 0;
+            &::before {
+                box-shadow: 3px -3px 7px rgba(0, 0, 0, 0.07);
+            }
+        }
+    }
+
+    &.bs-tooltip-end {
+        padding-left: var(--tooltip-distance);
+        .o_tooltip_arrow {
+            left: 0;
+            &::before {
+                box-shadow: -3px 3px 7px rgba(0, 0, 0, 0.07);
+            }
+        }
+    }
+
+    // Animation
+    &.show {
+        opacity: 1;
+    }
+
+    &.fade {
+        transition: opacity 0.15s linear;
+        &:not(.show) {
+            opacity: 0;
+        }
+    }
+}

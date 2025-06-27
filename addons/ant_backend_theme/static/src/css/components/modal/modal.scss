@@ -1,0 +1,93 @@
+  .o_dialog {
+      .modal {
+          .modal-dialog {
+              .modal-content {
+                  // Ant Design v5 modal styles
+                  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+                      0 3px 6px -4px rgba(0, 0, 0, 0.12),
+                      0 9px 28px 8px rgba(0, 0, 0, 0.05) !important;
+                  border-radius: 8px !important;
+                  border: none !important;
+                  background: #fff !important;
+
+                  .modal-header {
+                      padding-top: 20px !important;
+                      padding-right: 24px !important;
+                      padding-bottom: 0 !important;
+                      padding-left: 24px !important;
+                      border-bottom: none !important;
+
+                      .modal-title {
+                          color: rgba(0, 0, 0, 0.88) !important;
+                          font-weight: 600 !important;
+                          font-size: 16px !important;
+                          line-height: 1.5 !important;
+                          word-wrap: break-word !important;
+                      }
+
+                      .btn-close {
+                          padding: 12px !important;
+                          margin: -12px -12px -12px auto !important;
+                          color: rgba(0, 0, 0, 0.45) !important;
+
+                          &:hover {
+                              color: rgba(0, 0, 0, 0.88) !important;
+                          }
+                      }
+                  }
+
+                  .modal-body {
+                      padding-top: 8px !important;
+                      padding-right: 24px !important;
+                      padding-bottom: 20px !important;
+                      padding-left: 24px !important;
+                      font-size: 14px !important;
+                      line-height: 1.5715 !important;
+                      color: rgba(0, 0, 0, 0.88) !important;
+                  }
+
+                  .modal-footer {
+                      padding-top: 0 !important;
+                      padding-right: 24px !important;
+                      padding-bottom: 20px !important;
+                      padding-left: 24px !important;
+                      border: none !important;
+                      display: flex !important;
+                      gap: 8px !important;
+
+                      @media (min-width: 768px) {
+                          justify-content: flex-end !important;
+                      }
+
+                      .btn {
+                          height: 32px !important;
+                          padding: 4px 15px !important;
+                          font-size: 14px !important;
+                          border-radius: 8px !important;
+
+                          &.btn-primary {
+                              background: #1677ff !important;
+                              border-color: #1677ff !important;
+
+                              &:hover {
+                                  background: #4096ff !important;
+                                  border-color: #4096ff !important;
+                              }
+                          }
+
+                          &.btn-secondary {
+                              background: #fff !important;
+                              border-color: #d9d9d9 !important;
+                              color: rgba(0, 0, 0, 0.88) !important;
+
+                              &:hover {
+                                  color: #4096ff !important;
+                                  border-color: #4096ff !important;
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      }
+  }

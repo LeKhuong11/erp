@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.inherit.ant.design.theme</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="90"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='companies']" position="after">
+                <div class="app_settings_block" data-string="Ant Design Theme" data-key="ant_backend_theme" id="ant_backend_theme_settings" style="border: none; box-shadow: 0 1px 4px rgba(0,0,0,0.04); border-radius: 8px; margin-bottom: 32px; background: #fff;">
+                    <h2 style="font-size: 18px; font-weight: 600; margin-bottom: 24px; color: #222;margin-top: 12px;">Ant Design Theme</h2>
+                    <div class="row" style="margin: 0;margin-top: 12px; ">
+                        <!-- Logo Image Setting -->
+                        <div class="col-md-4 d-flex align-items-center justify-content-center" style="min-width: 220px; max-width: 260px;">
+                            <field name="theme_logo" widget="image" class="border" style="width: 140px; height: 140px; border-radius: 16px; border: 1px solid #e5e7eb; background: #f9f9f9; object-fit: contain;"/>
+                        </div>
+                        <div class="col-md-8" style="display: flex; flex-direction: column; justify-content: center;">
+                            <div style="margin-bottom: 18px;">
+                                <label for="theme_logo" style="font-weight: 500; font-size: 15px; color: #333;">Logo Image</label>
+                                <div class="text-muted" style="font-size: 13px;">
+                                    Set your custom logo for Ant Design theme (default: Ant Design Logo)
+                                </div>
+                            </div>
+                            <div>
+                                <label for="theme_brand_name" style="font-weight: 500; font-size: 15px; color: #333;">Brand Name</label>
+                                <field name="theme_brand_name" style="width: 100%; max-width: 320px; margin-top: 4px;"/>
+                                <div class="text-muted" style="font-size: 13px;">
+                                    Set your brand name to display in the navigation bar (default: Odoo | Ant Design)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

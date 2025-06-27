@@ -1,0 +1,156 @@
+.o-checkbox:has(.form-check-input:disabled[type="checkbox"]) {
+  cursor: not-allowed !important;
+}
+
+.o-checkbox.form-check:not(.form-switch) {
+  position: relative;
+
+  width: map-get($sizes, "default");
+  height: map-get($sizes, "default");
+  box-sizing: border-box;
+
+  &:hover {
+    border: none !important;
+  }
+
+  .form-check-input[type="checkbox"] {
+    width: map-get($sizes, "default") !important;
+    height: map-get($sizes, "default") !important;
+    border: 1px solid map-get($color-border-light, default) !important;
+    box-shadow: none !important;
+    box-sizing: border-box;
+    border-radius: map-get($border-radii, "sm") !important;
+
+    &:hover {
+      border: 1px solid map-get($blue-light, 6) !important;
+    }
+
+    &:focus {
+      border: 1px solid map-get($blue-light, 6) !important;
+    }
+
+    &:active {
+      filter: none !important;
+    }
+
+    &:before {
+      box-sizing: border-box;
+      position: absolute;
+      top: 55%;
+      inset-inline-start: 20%;
+      display: table;
+      width: 5.7142857142857135px;
+      height: 9.142857142857142px;
+      border: 2px solid #fff;
+      border-top: 0;
+      border-inline-start: 0;
+      transform: rotate(45deg) scale(0) translate(-50%, -50%);
+      opacity: 0;
+      content: "";
+      transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
+    }
+
+    &:after {
+      box-sizing: border-box;
+      border: transparent !important;
+    }
+  }
+
+  .form-check-input:checked[type="checkbox"] {
+    --form-check-bg-image: none !important;
+    background-color: map-get($blue-light, 6) !important;
+    border: 1px solid map-get($blue-light, 6) !important;
+
+    &:hover {
+      &:not(:disabled) {
+        background-color: map-get($blue-light, 5) !important;
+        border: 1px solid map-get($blue-light, 5) !important;
+      }
+    }
+
+    &:before {
+      background-color: transparent;
+      opacity: 1;
+      transform: rotate(45deg) scale(1) translate(-50%, -50%);
+      transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+    }
+
+    &:after {
+      position: absolute;
+      top: 3.5px;
+      inset-inline-start: 0;
+      width: 16px;
+      height: 16px;
+      border-radius: map-get($border-radii, "sm") !important;
+      border: 2px solid map-get($blue-light, 6) !important;
+      animation-name: checkboxEffectOuter;
+      animation-duration: 0.3s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: both;
+      content: "";
+      transition: all 0.3s;
+    }
+  }
+
+  .form-check-input:checked {
+    --form-check-bg-image: none !important;
+    background-color: map-get($blue-light, 6) !important;
+    border: 1px solid map-get($blue-light, 6) !important;
+
+    &:hover {
+      &:not(:disabled) {
+        background-color: map-get($blue-light, 5) !important;
+        border: 1px solid map-get($blue-light, 5) !important;
+      }
+    }
+
+    &:before {
+      background-color: transparent;
+      opacity: 1;
+      transform: rotate(45deg) scale(1) translate(-50%, -50%);
+      transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+    }
+
+    &:after {
+      position: absolute;
+      top: 3.5px;
+      inset-inline-start: 0;
+      width: 16px;
+      height: 16px;
+      border-radius: map-get($border-radii, "sm") !important;
+      border: 2px solid map-get($blue-light, 6) !important;
+      animation-name: checkboxEffectOuter;
+      animation-duration: 0.3s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: both;
+      content: "";
+      transition: all 0.3s;
+    }
+  }
+
+  .form-check-input:not(:checked)[type="checkbox"] {
+    border: 1px solid map-get($color-border-light, default) !important;
+  }
+
+  .form-check-input:disabled[type="checkbox"] {
+    border: 1px solid map-get($color-border-light, default) !important;
+    background-color: rgba(0, 0, 0, 0.04) !important;
+    cursor: not-allowed !important;
+
+    &:before {
+      border-color: rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+@keyframes checkboxEffectOuter {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
