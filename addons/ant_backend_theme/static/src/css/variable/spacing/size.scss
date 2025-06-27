@@ -1,0 +1,32 @@
+// Size Variables
+$sizes: (
+  "xxs": 4px,
+  "xs": 8px,
+  "sm": 12px,
+  "default": 16px,
+  "ms": 16px,
+  "md": 20px,
+  "lg": 24px,
+  "xl": 32px,
+  "xxl": 48px,
+);
+
+
+// Height Variables
+$heights: (
+  "control-xs": 16px,
+  "control-sm": 24px,
+  "control": 32px,
+  "control-lg": 40px,
+);
+
+
+// Screen Size Variables
+$screen-sizes: (
+  "xs": 480px,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1600px,
+);

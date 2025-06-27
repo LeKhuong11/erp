@@ -1,0 +1,137 @@
+// Primary Colors
+$color-primary-bg-light: map-get($blue-light, 1);
+$color-primary-bg-dark: map-get($blue-dark, 1);
+$color-primary-bg-hover-light: map-get($blue-light, 2);
+$color-primary-bg-hover-dark: map-get($blue-dark, 2);
+$color-primary-border-light: map-get($blue-light, 3);
+$color-primary-border-dark: map-get($blue-dark, 3);
+$color-primary-border-hover-light: map-get($blue-light, 4);
+$color-primary-border-hover-dark: map-get($blue-dark, 4);
+$color-primary-hover-light: map-get($blue-light, 5);
+$color-primary-hover-dark: map-get($blue-dark, 5);
+$color-primary-light: map-get($blue-light, 6);
+$color-primary-dark: map-get($blue-dark, 6);
+$color-primary-active-light: map-get($blue-light, 7);
+$color-primary-active-dark: map-get($blue-dark, 7);
+$color-primary-text-hover-light: map-get($blue-light, 5);
+$color-primary-text-hover-dark: map-get($blue-dark, 5);
+$color-primary-text-light: map-get($blue-light, 6);
+$color-primary-text-dark: map-get($blue-dark, 6);
+$color-primary-text-active-light: map-get($blue-light, 7);
+$color-primary-text-active-dark: map-get($blue-dark, 7);
+
+
+// Success Colors
+$color-success-bg-light: map-get($green-light, 1);
+$color-success-bg-dark: map-get($green-dark, 1);
+$color-success-bg-hover-light: map-get($green-light, 2);
+$color-success-bg-hover-dark: map-get($green-dark, 2);
+$color-success-border-light: map-get($green-light, 3);
+$color-success-border-dark: map-get($green-dark, 3);
+$color-success-border-hover-light: map-get($green-light, 4);
+$color-success-border-hover-dark: map-get($green-dark, 4);
+$color-success-hover-light: map-get($green-light, 4);
+$color-success-hover-dark: map-get($green-dark, 4);
+$color-success-light: map-get($green-light, 6);
+$color-success-dark: map-get($green-dark, 6);
+$color-success-active-light: map-get($green-light, 7);
+$color-success-active-dark: map-get($green-dark, 7);
+$color-success-text-hover-light: map-get($green-light, 5);
+$color-success-text-hover-dark: map-get($green-dark, 5);
+$color-success-text-light: map-get($green-light, 6);
+$color-success-text-dark: map-get($green-dark, 6);
+$color-success-text-active-light: map-get($green-light, 7);
+$color-success-text-active-dark: map-get($green-dark, 7);
+
+
+// Warning Colors
+$color-warning-bg-light: map-get($gold-light, 1);
+$color-warning-bg-dark: map-get($gold-dark, 1);
+$color-warning-bg-hover-light: map-get($gold-light, 2);
+$color-warning-bg-hover-dark: map-get($gold-dark, 2);
+$color-warning-border-light: map-get($gold-light, 3);
+$color-warning-border-dark: map-get($gold-dark, 3);
+$color-warning-border-hover-light: map-get($gold-light, 4);
+$color-warning-border-hover-dark: map-get($gold-dark, 4);
+$color-warning-hover-light: map-get($gold-light, 4);
+$color-warning-hover-dark: map-get($gold-dark, 4);
+$color-warning-light: map-get($gold-light, 6);
+$color-warning-dark: map-get($gold-dark, 6);
+$color-warning-active-light: map-get($gold-light, 7);
+$color-warning-active-dark: map-get($gold-dark, 7);
+$color-warning-text-hover-light: map-get($gold-light, 5);
+$color-warning-text-hover-dark: map-get($gold-dark, 5);
+$color-warning-text-light: map-get($gold-light, 6);
+$color-warning-text-dark: map-get($gold-dark, 6);
+$color-warning-text-active-light: map-get($gold-light, 7);
+$color-warning-text-active-dark: map-get($gold-dark, 7);
+
+
+// Info Colors
+$color-info-bg-light: map-get($blue-light, 1);
+$color-info-bg-dark: map-get($blue-dark, 1);
+$color-info-bg-hover-light: map-get($blue-light, 2);
+$color-info-bg-hover-dark: map-get($blue-dark, 2);
+$color-info-border-light: map-get($blue-light, 3);
+$color-info-border-dark: map-get($blue-dark, 3);
+$color-info-border-hover-light: map-get($blue-light, 4);
+$color-info-border-hover-dark: map-get($blue-dark, 4);
+$color-info-hover-light: map-get($blue-light, 4);
+$color-info-hover-dark: map-get($blue-dark, 4);
+$color-info-light: map-get($blue-light, 6);
+$color-info-dark: map-get($blue-dark, 6);
+$color-info-active-light: map-get($blue-light, 7);
+$color-info-active-dark: map-get($blue-dark, 7);
+$color-info-text-hover-light: map-get($blue-light, 5);
+$color-info-text-hover-dark: map-get($blue-dark, 5);
+$color-info-text-light: map-get($blue-light, 6);
+$color-info-text-dark: map-get($blue-dark, 6);
+$color-info-text-active-light: map-get($blue-light, 7);
+$color-info-text-active-dark: map-get($blue-dark, 7);
+
+
+// Error Colors
+$color-error-bg-light: #FFF2F0;
+$color-error-bg-dark: #2C1618;
+$color-error-bg-hover-light: #FFF1F0;
+$color-error-bg-hover-dark: #451D1F;
+$color-error-border-light: #FFCCC7;
+$color-error-border-dark: #5B2526;
+$color-error-border-hover-light: #FFA39E;
+$color-error-border-hover-dark: #7E2E2F;
+$color-error-hover-light: #FF7875;
+$color-error-hover-dark: #E86E6B;
+$color-error-light: #F44D4F;
+$color-error-dark: #DC4446;
+$color-error-active-light: #D9363E;
+$color-error-active-dark: #AD393A;
+$color-error-text-hover-light: #FF7875;
+$color-error-text-hover-dark: #E86E6B;
+$color-error-text-light: #F44D4F;
+$color-error-text-dark: #DC4446;
+$color-error-text-active-light: #D9363E;
+$color-error-text-active-dark: #AD393A;
+
+
+// Link Colors
+$color-link-light: map-get($blue-light, 6);
+$color-link-dark: map-get($blue-dark, 6);
+$color-link-hover-light: map-get($blue-light, 5);
+$color-link-hover-dark: map-get($blue-dark, 5);
+$color-link-active-light: map-get($blue-light, 7);
+$color-link-active-dark: map-get($blue-dark, 7);
+
+
+// Control Colors
+$control-item-bg-active-light: map-get($color-primary-bg-light, default);
+$control-item-bg-active-dark: map-get($color-primary-bg-dark, default);
+$control-item-bg-active-disabled-light: map-get($color-fill-light, default);
+$control-item-bg-active-disabled-dark: map-get($color-fill-dark, default);
+$control-item-bg-active-hover-light: map-get($color-primary-bg-hover-light, default);
+$control-item-bg-active-hover-dark: map-get($color-primary-bg-hover-dark, default);
+$control-item-bg-hover-light: map-get($color-fill-tertiary-light, default);
+$control-item-bg-hover-dark: map-get($color-fill-tertiary-dark, default);
+$control-outline-light: #0591FF1A;
+$control-outline-dark: #003CB426;
+$control-tmp-outline-light: map-get($color-fill-quaternary-light, default);
+$control-tmp-outline-dark: map-get($color-fill-quaternary-dark, default);

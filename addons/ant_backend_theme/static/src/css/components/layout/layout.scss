@@ -1,0 +1,333 @@
+.o_main_navbar {
+    background: rgba(255, 255, 255, 0.6) !important;
+    border-bottom: 1px solid rgba(5, 5, 5, 0.06) !important;
+
+    .fa:before {
+        font-family: "iconsax" !important;
+        speak: never;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* 🔹 Icono message-notif */
+    .fa-comments:before {
+        content: "\E00B" !important;
+    }
+
+    .fa-clock-o:before {
+        content: "\E002" !important;
+    }
+}
+
+.o_main_navbar .dropdown-toggle:not(.o-dropdown-toggle-custo),
+.o_main_navbar .o_menu_toggle {
+    color: rgba(0, 0, 0, 0.88) !important;
+}
+
+.o_main_navbar .o_menu_brand,
+.o_main_navbar .o_navbar_breadcrumbs,
+.o_main_navbar .o_navbar_breadcrumbs .btn {
+    color: rgba(0, 0, 0, 0.88) !important;
+}
+
+.o_main_navbar .o_menu_brand,
+.o_main_navbar .o_navbar_apps_menu .dropdown-toggle,
+.o_main_navbar .o_nav_entry,
+.o_main_navbar .dropdown-toggle:not(.o-dropdown-toggle-custo),
+.o_main_navbar .o_menu_toggle {
+    color: rgba(0, 0, 0, 0.88) !important;
+}
+
+.o_main_navbar .o_menu_sections .o_nav_entry,
+.o_main_navbar .o_menu_sections .dropdown-toggle {
+    background: none !important;
+}
+
+
+.o_control_panel {
+    background: rgba(255, 255, 255, 0.6) !important;
+    border: none !important;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03), 0 1px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.02) !important;
+    z-index: 99 !important;
+}
+
+
+.o_main_navbar .o_menu_systray .badge {
+    background: #FF4D4F !important;
+    color: #ffffff !important;
+}
+
+@media (min-width: 768px) {
+    .o_search_panel {
+        border-right: 1px solid rgba(5, 5, 5, 0.06) !important;
+    }
+}
+
+.o_search_panel {
+    background-color: rgba(255, 255, 255, 0.6) !important;
+
+    .list-group-item {
+        height: 40px !important;
+        margin: 4px 0 !important;
+        border-radius: 8px !important;
+    }
+
+    .list-group-item.active {
+        --list-group-active-bg: #e6f4ff !important;
+        border-radius: 8px !important;
+    }
+}
+
+.o_control_panel_navigation {
+    .btn-group {
+
+        [class^="oi-"],
+        [class*=" oi-"] {
+            speak: never;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        [class^="oi-"] [class^="path"]:before,
+        [class*=" oi-"] [class^="path"]:before,
+        [class^="oi-"]:before,
+        [class*=" oi-"]:before {
+            font-family: "iconsax" !important;
+            doiplay: inline-block;
+            color: inherit;
+            font-style: normal;
+            font-weight: normal;
+            speak: never;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .fa:before {
+            font-family: "iconsax" !important;
+            speak: never;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .oi {
+            font-family: "iconsax" !important;
+            speak: never;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .oi:before,
+        .fa:before {
+            font-size: 20px !important;
+            vertical-align: middle !important;
+            text-rendering: geometricPrecision;
+        }
+
+        /* 🔹 Icono cards */
+        .oi-view-kanban:before {
+            content: "\E000" !important;
+        }
+
+        /* 🔹 Icono task-square */
+        .oi-view-list:before {
+            content: "\E001" !important;
+        }
+
+        /* 🔹 Icono activity */
+        .o_activity > .fa-clock-o:before {
+            content: "\E002" !important;
+        }
+
+        /* 🔹 Icono chart-2 */
+        .fa-area-chart:before {
+            content: "\E003" !important;
+        }
+
+        /* 🔹 Icono data-2 */
+        .o_hierarchy {
+            .fa-share-alt:before {
+                content: "\E004" !important;
+            }
+
+            .fa-rotate-90 {
+                transform: none !important;
+            }
+        }
+
+        /* 🔹 Icono grid-8 */
+        .oi-view-pivot:before {
+            content: "\E005" !important;
+        }
+
+        /* 🔹 Icono arrow-left-02 */
+        .oi-chevron-left:before {
+            content: "\E008" !important;
+        }
+
+        /* 🔹 Icono arrow-right-02 */
+        .oi-chevron-right:before {
+            content: "\E009" !important;
+        }
+
+        /* 🔹 Icono calendar-2 */
+        .fa-calendar:before {
+            content: "\E00A";
+        }
+    }
+
+
+}
+
+.form-control {
+    border-radius: 8px;
+}
+
+.o-form-buttonbox {
+    // gap: 8px !important;
+}
+
+.o_control_panel_breadcrumbs {
+    border: none !important;
+}
+
+label {
+    margin-right: 8px;
+}
+
+.o_field_image {
+    div {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        img {
+            max-width: 100% !important;
+            max-height: 100% !important;
+        }
+    }
+}
+
+.o_menu_brand_icon {
+    object-fit: cover !important;
+    border-radius: 9999px !important;
+}
+
+.o_searchview_facet_label {
+    span {
+        border-radius: 8px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+}
+
+.o_dropdown_container {
+    h5 {
+        margin-bottom: 4px !important;
+    }
+    --dropdown-item-padding-y: 8px !important;
+    --dropdown-item-border-radius: 8px !important;
+    --dropdown-divider-bg: rgba(5, 5, 5, 0.06) !important;
+    .o_accordion_toggle::after {
+        transform: translate(-10px, 16px) !important;
+    }
+    .o-dropdown--menu .dropdown-toggle.focus, .o-dropdown--menu .dropdown-item.focus {
+        background-color: rgba(0, 0, 0, 0.06) !important;
+    }
+}
+
+.o_search_bar_menu .o_dropdown_container {
+    border-color: rgba(5, 5, 5, 0.06) !important;
+}
+
+.o-dropdown.btn-secondary.show, .o-dropdown.btn-outline-secondary.show {
+    color: #0958d9 !important;
+    border-color: #0958d9 !important;
+    background: none !important;
+}
+
+.bg-action, .text-bg-action {
+    --background-color: #0958d9 !important;
+    background-color: var(--background-color) !important;
+}
+
+:root {
+    --border-color: rgba(5, 5, 5, 0.06) !important;
+    --box-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.03), 0 1px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.02);
+    --border-color-translucent: #f0f0f0 !important;
+    --border-radius: 8px !important;
+}
+
+.table {
+    --table-border-color: rgba(5, 5, 5, 0.06) !important;
+}
+
+.text-primary, .text-action {
+    --color: #0958d9 !important;
+    color: var(--color) !important;
+}
+
+.bg-success {
+    --background-color: #84AE92 !important;
+}
+
+.bg-warning {
+    --background-color: #FED16A !important;
+}
+
+.o_tag.o_tag_color_1, .o_tag.o_tag_color_1::after {
+    --background-color: #FFAAAA;
+}
+
+.o_tag.o_tag_color_4, .o_tag.o_tag_color_4::after {
+    --background-color: #A4CCD9;
+}
+
+.o_tag.o_tag_color_5, .o_tag.o_tag_color_5::after {
+    --background-color: #9B7EBD;
+}
+
+.o_tag.o_tag_color_7, .o_tag.o_tag_color_7::after {
+    --background-color: #B2CD9C !important;
+}
+
+.o_tag.o_tag_color_9, .o_tag.o_tag_color_9::after {
+    --background-color: #FFAAAA !important;
+}
+
+.o-mail-Message-bubble.o-blue {
+    background-color: #C4E1E6 !important;
+    border-color: #bbe3ea !important;
+}
+
+.o-mail-Message-bubble.o-green {
+    background-color: #B9D4AA !important;
+    border-color: #c0e5c9 !important;
+}
+
+.o_base_settings_view .o_form_renderer {
+    --settings__tab-bg: rgba(255, 255, 255, 0.6) !important;
+}
+
+.o_base_settings_view .o_form_renderer {
+    --settings__tab-bg--active: #e6f4ff;
+}

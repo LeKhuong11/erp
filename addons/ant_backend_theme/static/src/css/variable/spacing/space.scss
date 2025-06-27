@@ -1,0 +1,30 @@
+// Margin Variables
+$margins: (
+  "xxs": map-get($sizes, "xxs"),   // 4px
+  "xs": map-get($sizes, "xs"),     // 8px
+  "sm": map-get($sizes, "sm"),     // 12px
+  "default": map-get($sizes, "default"), // 16px
+  "md": map-get($sizes, "md"),     // 20px
+  "lg": map-get($sizes, "lg"),     // 24px
+  "xl": map-get($sizes, "xl"),     // 32px
+  "xxl": map-get($sizes, "xxl"),   // 48px
+) !default;
+
+
+// Padding Variables
+$paddings: (
+  "xxs": map-get($sizes, "xxs"),       // 4px
+  "xs": map-get($sizes, "xs"),         // 8px
+  "sm": map-get($sizes, "sm"),         // 12px
+  "default": map-get($sizes, "default"),  // 16px
+  "md": map-get($sizes, "md"),         // 20px
+  "lg": map-get($sizes, "lg"),         // 24px
+  "xl": map-get($sizes, "xl"),         // 32px
+  "xxl": map-get($sizes, "xxl"),       // 48px
+  "content-horizontal-sm": map-get($sizes, "default"), // 16px
+  "content-vertical-sm": map-get($sizes, "xs"),       // 8px
+  "content-horizontal": map-get($sizes, "default"),    // 16px (maps to sizeMS)
+  "content-vertical": map-get($sizes, "sm"),  // 12px
+  "content-horizontal-lg": map-get($sizes, "lg"),    // 24px
+  "content-vertical-lg": map-get($sizes, "default"),    // 16px (maps to sizeMS)
+) !default;

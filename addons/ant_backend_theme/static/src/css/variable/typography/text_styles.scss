@@ -1,0 +1,73 @@
+// Text Styles
+.strong {
+  font-weight: 600;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.text-base {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.text-sm {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.text-lg {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+h1,
+.h1 {
+  font-size: 38px;
+  line-height: 46px;
+  font-weight: 600;
+}
+
+h2,
+.h2 {
+  font-size: 30px;
+  line-height: 38px;
+  font-weight: 600;
+}
+
+h3,
+.h3 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+h4,
+.h4 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+}
+
+h5,
+.h5 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+h6,
+.h6 {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+}

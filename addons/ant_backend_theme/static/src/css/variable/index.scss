@@ -1,0 +1,310 @@
+:root {
+    /* Neutral Colors */
+    --neutral-100: #ffffff !important;
+    --neutral-200: #fafafa !important;
+    --neutral-300: #f5f5f5 !important;
+    --neutral-400: #f0f0f0 !important;
+    --neutral-500: #d9d9d9 !important;
+    --neutral-600: #bfbfbf !important;
+    --neutral-700: #8c8c8c !important;
+    --neutral-800: #595959 !important;
+    --neutral-900: #434343 !important;
+    --neutral-1000: #262626 !important;
+    --neutral-1100: #1f1f1f !important;
+    --neutral-1200: #141414 !important;
+
+    /* White Opacity */
+    --white-85: rgba(255, 255, 255, 0.85) !important;
+    --white-75: rgba(255, 255, 255, 0.75) !important;
+    --white-50: rgba(255, 255, 255, 0.5) !important;
+    --white-25: rgba(255, 255, 255, 0.25) !important;
+
+    /* Black Opacity */
+    --black-75: rgba(0, 0, 0, 0.75) !important;
+    --black-50: rgba(0, 0, 0, 0.5) !important;
+    --black-25: rgba(0, 0, 0, 0.25) !important;
+    --black-15: rgba(0, 0, 0, 0.15) !important;
+
+    /* Primary Colors */
+    --o-cc1-text: #000000 !important;
+    --o-cc1-headings: #000000 !important;
+    --o-cc1-h2: #000000 !important;
+    --o-cc1-h3: #000000 !important;
+    --o-cc1-h4: #000000 !important;
+    --o-cc1-h5: #000000 !important;
+    --o-cc1-h6: #000000 !important;
+    --o-cc1-link: #1677ff !important;
+    --o-cc1-btn-primary: #1677ff !important;
+    --o-cc1-btn-primary-text: #ffffff !important;
+    --o-cc1-btn-primary-border: #1677ff !important;
+    --o-cc1-btn-secondary: #f5f5f5 !important;
+    --o-cc1-btn-secondary-text: #000000 !important;
+    --o-cc1-btn-secondary-border: #d9d9d9 !important;
+
+    /* Secondary Colors */
+    --o-cc2-text: #000000 !important;
+    --o-cc2-h2: #000000 !important;
+    --o-cc2-h3: #000000 !important;
+    --o-cc2-h4: #000000 !important;
+    --o-cc2-h5: #000000 !important;
+    --o-cc2-h6: #000000 !important;
+    --o-cc2-link: #1677ff !important;
+    --o-cc2-btn-primary: #1677ff !important;
+    --o-cc2-btn-primary-text: #ffffff !important;
+    --o-cc2-btn-primary-border: #1677ff !important;
+    --o-cc2-btn-secondary: #f5f5f5 !important;
+    --o-cc2-btn-secondary-text: #000000 !important;
+    --o-cc2-btn-secondary-border: #d9d9d9 !important;
+
+    /* Tertiary Colors */
+    --o-cc3-text: #ffffff !important;
+    --o-cc3-headings: #ffffff !important;
+    --o-cc3-h2: #ffffff !important;
+    --o-cc3-h3: #ffffff !important;
+    --o-cc3-h4: #ffffff !important;
+    --o-cc3-h5: #ffffff !important;
+    --o-cc3-h6: #ffffff !important;
+    --o-cc3-link: #1677ff !important;
+    --o-cc3-btn-primary: #1677ff !important;
+    --o-cc3-btn-primary-text: #ffffff !important;
+    --o-cc3-btn-primary-border: #1677ff !important;
+    --o-cc3-btn-secondary-text: #000000 !important;
+    --o-cc3-btn-secondary-border: #f5f5f5 !important;
+
+    /* Quaternary Colors */
+    --o-cc4-text: #ffffff !important;
+    --o-cc4-headings: #ffffff !important;
+    --o-cc4-h2: #ffffff !important;
+    --o-cc4-h3: #ffffff !important;
+    --o-cc4-h4: #ffffff !important;
+    --o-cc4-h5: #ffffff !important;
+    --o-cc4-h6: #ffffff !important;
+    --o-cc4-link: #1677ff !important;
+    --o-cc4-btn-primary-text: #ffffff !important;
+    --o-cc4-btn-primary-border: #1677ff !important;
+    --o-cc4-btn-secondary-text: #000000 !important;
+    --o-cc4-btn-secondary-border: #f5f5f5 !important;
+
+    /* Quinary Colors */
+    --o-cc5-text: #ffffff !important;
+    --o-cc5-h2: #ffffff !important;
+    --o-cc5-h3: #ffffff !important;
+    --o-cc5-h4: #ffffff !important;
+    --o-cc5-h5: #ffffff !important;
+    --o-cc5-h6: #ffffff !important;
+    --o-cc5-link: #1677ff !important;
+    --o-cc5-btn-primary: #1677ff !important;
+    --o-cc5-btn-primary-text: #ffffff !important;
+    --o-cc5-btn-primary-border: #1677ff !important;
+    --o-cc5-btn-secondary-text: #000000 !important;
+    --o-cc5-btn-secondary-border: #f5f5f5 !important;
+
+    /* Layout */
+    --o-grid-gutter-width: 24px !important;
+    --o-md-container-max-width: 768px !important;
+
+    /* Translation Colors */
+    --o-we-content-to-translate-color: rgba(255, 255, 90, 0.5) !important;
+    --o-we-translated-content-color: rgba(120, 215, 110, 0.5) !important;
+
+    /* Typography */
+    --o-system-fonts: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !important;
+    --display-1-font-size: 64px !important;
+    --display-2-font-size: 48px !important;
+    --display-3-font-size: 40px !important;
+    --display-4-font-size: 32px !important;
+    --h1-font-size: 38px !important;
+    --h2-font-size: 30px !important;
+    --h3-font-size: 24px !important;
+    --h4-font-size: 20px !important;
+    --h5-font-size: 16px !important;
+    --h6-font-size: 14px !important;
+    --font-size-base: 14px !important;
+    --small-font-size: 12px !important;
+    --lead-font-size: 16px !important;
+
+    /* Ant Design V5 Calendar Theme Variables */
+    --fc-small-font-size: 14px !important;
+    --fc-page-bg-color: #ffffff !important;
+    --fc-neutral-bg-color: rgba(0, 0, 0, 0.04) !important;
+    --fc-neutral-text-color: rgba(0, 0, 0, 0.45) !important;
+    --fc-border-color: #f0f0f0 !important;
+    --fc-button-text-color: #ffffff !important;
+    --fc-button-bg-color: #1677ff !important;
+    --fc-button-border-color: #1677ff !important;
+    --fc-button-hover-bg-color: #4096ff !important;
+    --fc-button-hover-border-color: #4096ff !important;
+    --fc-button-active-bg-color: #0958d9 !important;
+    --fc-button-active-border-color: #0958d9 !important;
+    --fc-event-bg-color: #1677ff !important;
+    --fc-event-border-color: #1677ff !important;
+    --fc-event-text-color: #ffffff !important;
+    --fc-event-selected-overlay-color: rgba(0, 0, 0, 0.15) !important;
+    --fc-more-link-bg-color: #f5f5f5 !important;
+    --fc-more-link-text-color: rgba(0, 0, 0, 0.85) !important;
+    --fc-event-resizer-thickness: 8px !important;
+    --fc-event-resizer-dot-total-width: 8px !important;
+    --fc-event-resizer-dot-border-width: 1px !important;
+    --fc-non-business-color: rgba(0, 0, 0, 0.02) !important;
+    --fc-bg-event-color: #b7eb8f !important;
+    --fc-bg-event-opacity: 0.3 !important;
+    --fc-highlight-color: rgba(22, 119, 255, 0.1) !important;
+    --fc-today-bg-color: rgba(22, 119, 255, 0.1) !important;
+    --fc-now-indicator-color: #ff4d4f !important;
+
+    /* Ant Design V5 Color System */
+    --blue: #1677ff !important;
+    --indigo: #531dab !important;
+    --purple: #722ed1 !important;
+    --pink: #eb2f96 !important;
+    --red: #f5222d !important;
+    --orange: #fa8c16 !important;
+    --yellow: #fadb14 !important;
+    --green: #52c41a !important;
+    --teal: #13c2c2 !important;
+    --cyan: #1677ff !important;
+    --white: #ffffff !important;
+    --gray: #8c8c8c !important;
+    --gray-dark: #262626 !important;
+
+    /* Ant Design V5 Theme Colors */
+    --primary: #1677ff !important;
+    --primary-hover: #4096ff !important;
+    --primary-active: #0958d9 !important;
+    --primary-outline: rgba(22, 119, 255, 0.2) !important;
+    --primary-1: #e6f4ff !important;
+    --primary-2: #bae0ff !important;
+    --primary-3: #91caff !important;
+    --primary-4: #69b1ff !important;
+    --primary-5: #4096ff !important;
+    --primary-6: #1677ff !important;
+    --primary-7: #0958d9 !important;
+    --primary-8: #003eb3 !important;
+    --primary-9: #002c8c !important;
+    --primary-10: #001d66 !important;
+
+    /* Success Colors */
+    --success: #52c41a !important;
+    --success-hover: #73d13d !important;
+    --success-active: #389e0d !important;
+    --success-outline: rgba(82, 196, 26, 0.2) !important;
+    --success-1: #f6ffed !important;
+    --success-2: #d9f7be !important;
+    --success-3: #b7eb8f !important;
+    --success-4: #95de64 !important;
+    --success-5: #73d13d !important;
+    --success-6: #52c41a !important;
+    --success-7: #389e0d !important;
+    --success-8: #237804 !important;
+    --success-9: #135200 !important;
+    --success-10: #092b00 !important;
+
+    /* Warning Colors */
+    --warning: #faad14 !important;
+    --warning-hover: #ffc53d !important;
+    --warning-active: #d48806 !important;
+    --warning-outline: rgba(250, 173, 20, 0.2) !important;
+    --warning-1: #fffbe6 !important;
+    --warning-2: #fff1b8 !important;
+    --warning-3: #ffe58f !important;
+    --warning-4: #ffd666 !important;
+    --warning-5: #ffc53d !important;
+    --warning-6: #faad14 !important;
+    --warning-7: #d48806 !important;
+    --warning-8: #ad6800 !important;
+    --warning-9: #874d00 !important;
+    --warning-10: #613400 !important;
+
+    /* Error Colors */
+    --error: #ff4d4f !important;
+    --error-hover: #ff7875 !important;
+    --error-active: #d9363e !important;
+    --error-outline: rgba(255, 77, 79, 0.2) !important;
+    --error-1: #fff2f0 !important;
+    --error-2: #fff1f0 !important;
+    --error-3: #ffccc7 !important;
+    --error-4: #ffa39e !important;
+    --error-5: #ff7875 !important;
+    --error-6: #ff4d4f !important;
+    --error-7: #f5222d !important;
+    --error-8: #cf1322 !important;
+    --error-9: #a8071a !important;
+    --error-10: #820014 !important;
+
+    /* Info Colors */
+    --info: #1677ff !important;
+    --info-hover: #4096ff !important;
+    --info-active: #0958d9 !important;
+    --info-outline: rgba(22, 119, 255, 0.2) !important;
+    --info-1: #e6f4ff !important;
+    --info-2: #bae0ff !important;
+    --info-3: #91caff !important;
+    --info-4: #69b1ff !important;
+    --info-5: #4096ff !important;
+    --info-6: #1677ff !important;
+    --info-7: #0958d9 !important;
+    --info-8: #003eb3 !important;
+    --info-9: #002c8c !important;
+    --info-10: #001d66 !important;
+
+    /* Neutral Colors */
+    --neutral-1: #ffffff !important;
+    --neutral-2: #fafafa !important;
+    --neutral-3: #f5f5f5 !important;
+    --neutral-4: #f0f0f0 !important;
+    --neutral-5: #d9d9d9 !important;
+    --neutral-6: #bfbfbf !important;
+    --neutral-7: #8c8c8c !important;
+    --neutral-8: #595959 !important;
+    --neutral-9: #434343 !important;
+    --neutral-10: #262626 !important;
+    --neutral-11: #1f1f1f !important;
+    --neutral-12: #141414 !important;
+    --neutral-13: #000000 !important;
+
+    /* Text Colors */
+    --text-primary: rgba(0, 0, 0, 0.88) !important;
+    --text-secondary: rgba(0, 0, 0, 0.65) !important;
+    --text-disabled: rgba(0, 0, 0, 0.25) !important;
+    --text-inverse: #ffffff !important;
+
+    /* Border Colors */
+    --border-color-base: #d9d9d9 !important;
+    --border-color-split: #f0f0f0 !important;
+    --border-color-inverse: #ffffff !important;
+
+    /* Background Colors */
+    --bg-color-base: #ffffff !important;
+    --bg-color-light: #fafafa !important;
+    --bg-color-dark: #141414 !important;
+    --bg-color-mask: rgba(0, 0, 0, 0.45) !important;
+
+    /* Component Colors */
+    --component-background: #ffffff !important;
+    --component-background-dark: #141414 !important;
+    --component-background-light: #fafafa !important;
+    --component-background-mask: rgba(0, 0, 0, 0.45) !important;
+
+    /* Link Colors */
+    --link-color: #1677ff !important;
+    --link-hover-color: #4096ff !important;
+    --link-active-color: #0958d9 !important;
+    --link-disabled-color: rgba(0, 0, 0, 0.25) !important;
+
+    /* Form Colors */
+    --form-valid-color: #52c41a !important;
+    --form-valid-border-color: #52c41a !important;
+    --form-invalid-color: #ff4d4f !important;
+    --form-invalid-border-color: #ff4d4f !important;
+
+    --link-color-rgb: 22, 119, 255 !important;
+    --o-stat-button-color: #1677ff !important;
+    --o-stat-button-color-rgb: 22, 119, 255 !important;
+    --o-stat-button-color-hover: #4096ff !important;
+    --o-stat-button-color-hover-rgb: 64, 150, 255 !important;
+    --o-stat-button-color-active: #0958d9 !important;
+    --o-stat-button-color-active-rgb: 9, 88, 217 !important;
+    --o-stat-button-color-disabled: #d9d9d9 !important;
+    --o-stat-button-color-disabled-rgb: 217, 217, 217 !important;
+
+}

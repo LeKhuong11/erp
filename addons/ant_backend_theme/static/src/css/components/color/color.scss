@@ -1,0 +1,189 @@
+// =======================================
+// ANT DESIGN V5 COLOR SYSTEM
+// =======================================
+
+// Primary Colors
+:root {
+    --ant-primary-color: #1890ff;
+    --ant-primary-color-hover: #40a9ff;
+    --ant-primary-color-active: #096dd9;
+    --ant-primary-color-outline: rgba(24, 144, 255, 0.2);
+
+    // Success Colors
+    --ant-success-color: #52c41a;
+    --ant-success-color-hover: #73d13d;
+    --ant-success-color-active: #389e0d;
+    --ant-success-color-outline: rgba(82, 196, 26, 0.2);
+
+    // Warning Colors
+    --ant-warning-color: #faad14;
+    --ant-warning-color-hover: #ffc53d;
+    --ant-warning-color-active: #d48806;
+    --ant-warning-color-outline: rgba(250, 173, 20, 0.2);
+
+    // Error Colors
+    --ant-error-color: #ff4d4f;
+    --ant-error-color-hover: #ff7875;
+    --ant-error-color-active: #d9363e;
+    --ant-error-color-outline: rgba(255, 77, 79, 0.2);
+
+    // Info Colors
+    --ant-info-color: #1890ff;
+    --ant-info-color-hover: #40a9ff;
+    --ant-info-color-active: #096dd9;
+    --ant-info-color-outline: rgba(24, 144, 255, 0.2);
+}
+
+// Color utilities
+.ant-color-primary {
+    color: var(--ant-primary-color) !important;
+}
+
+.ant-color-success {
+    color: var(--ant-success-color) !important;
+}
+
+.ant-color-warning {
+    color: var(--ant-warning-color) !important;
+}
+
+.ant-color-error {
+    color: var(--ant-error-color) !important;
+}
+
+.ant-color-info {
+    color: var(--ant-info-color) !important;
+}
+
+.ant-bg-primary {
+    background-color: var(--ant-primary-color) !important;
+}
+
+.ant-bg-success {
+    background-color: var(--ant-success-color) !important;
+}
+
+.ant-bg-warning {
+    background-color: var(--ant-warning-color) !important;
+}
+
+.ant-bg-error {
+    background-color: var(--ant-error-color) !important;
+}
+
+.ant-bg-info {
+    background-color: var(--ant-info-color) !important;
+}
+
+// // Ant Design v5 color system for Odoo
+// :root {
+//     // Primary colors
+//     --ant-primary-1: #e6f4ff;
+//     --ant-primary-2: #bae0ff;
+//     --ant-primary-3: #91caff;
+//     --ant-primary-4: #69b1ff;
+//     --ant-primary-5: #4096ff;
+//     --ant-primary-6: #1677ff; // Default
+//     --ant-primary-7: #0958d9;
+//     --ant-primary-8: #003eb3;
+//     --ant-primary-9: #002c8c;
+//     --ant-primary-10: #001d66;
+
+//     // Neutral colors
+//     --ant-neutral-1: rgba(0, 0, 0, 0.88); // Title
+//     --ant-neutral-2: rgba(0, 0, 0, 0.65); // Primary text
+//     --ant-neutral-3: rgba(0, 0, 0, 0.45); // Secondary text
+//     --ant-neutral-4: rgba(0, 0, 0, 0.25); // Disabled text
+//     --ant-neutral-5: rgba(0, 0, 0, 0.15); // Border
+//     --ant-neutral-6: rgba(0, 0, 0, 0.06); // Divider
+//     --ant-neutral-7: rgba(0, 0, 0, 0.04); // Background
+//     --ant-neutral-8: #ffffff; // White
+
+//     // Component colors
+//     --ant-component-background: var(--ant-neutral-8);
+//     --ant-border-radius-base: 6px;
+//     --ant-border-color-base: var(--ant-neutral-5);
+//     --ant-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+// }
+
+// // Dark mode
+// .dark-mode {
+//     // Primary colors
+//     --ant-primary-1: #111a2c;
+//     --ant-primary-2: #112545;
+//     --ant-primary-3: #15325b;
+//     --ant-primary-4: #15417e;
+//     --ant-primary-5: #1554ad;
+//     --ant-primary-6: #1668dc; // Default
+//     --ant-primary-7: #3c89e8;
+//     --ant-primary-8: #65a9f3;
+//     --ant-primary-9: #8dc5f8;
+//     --ant-primary-10: #b7dcfa;
+
+//     // Neutral colors  
+//     --ant-neutral-1: rgba(255, 255, 255, 0.85);
+//     --ant-neutral-2: rgba(255, 255, 255, 0.65);
+//     --ant-neutral-3: rgba(255, 255, 255, 0.45); 
+//     --ant-neutral-4: rgba(255, 255, 255, 0.25);
+//     --ant-neutral-5: rgba(255, 255, 255, 0.15);
+//     --ant-neutral-6: rgba(255, 255, 255, 0.06);
+//     --ant-neutral-7: rgba(255, 255, 255, 0.04);
+//     --ant-neutral-8: #141414;
+
+//     --ant-component-background: var(--ant-neutral-8);
+// }
+
+// // Odoo component overrides
+// .btn-primary {
+//     background-color: var(--ant-primary-6);
+//     border-color: var(--ant-primary-6);
+//     border-radius: var(--ant-border-radius-base);
+//     box-shadow: 0 2px 0 rgba(5, 145, 255, 0.1);
+
+//     &:hover {
+//         background-color: var(--ant-primary-5);
+//         border-color: var(--ant-primary-5);
+//     }
+
+//     &:active {
+//         background-color: var(--ant-primary-7);
+//         border-color: var(--ant-primary-7);
+//     }
+// }
+
+// // Links
+// a {
+//     color: var(--ant-primary-6);
+//     transition: color 0.3s;
+
+//     &:hover {
+//         color: var(--ant-primary-5);
+//     }
+
+//     &:active {
+//         color: var(--ant-primary-7);
+//     }
+// }
+
+// // Form controls
+// .form-control:focus,
+// .custom-select:focus {
+//     border-color: var(--ant-primary-5);
+//     box-shadow: 0 0 0 2px rgba(5, 145, 255, 0.1);
+// }
+
+// .custom-control-input:checked ~ .custom-control-label::before {
+//     background-color: var(--ant-primary-6);
+//     border-color: var(--ant-primary-6);
+// }
+
+// // Progress bars
+// .progress-bar {
+//     background-color: var(--ant-primary-6);
+// }
+
+// // Tables
+// .table {
+//     --table-header-bg: var(--ant-neutral-7);
+//     --table-row-hover-bg: var(--ant-neutral-7);
+// }

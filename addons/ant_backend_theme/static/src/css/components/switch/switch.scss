@@ -1,0 +1,123 @@
+.o-checkbox.form-switch {
+  --ant-switch-track-height: 22px;
+  --ant-switch-track-height-sm: 16px;
+  --ant-switch-track-min-width: 44px;
+  --ant-switch-track-min-width-sm: 28px;
+  --ant-switch-track-padding: 2px;
+  --ant-switch-handle-bg: #fff;
+  --ant-switch-handle-size: 18px;
+  --ant-switch-handle-size-sm: 12px;
+  --ant-switch-handle-shadow: 0 2px 4px 0 rgba(0, 35, 11, 0.2);
+  --ant-switch-inner-min-margin: 9px;
+  --ant-switch-inner-max-margin: 24px;
+  --ant-switch-inner-min-margin-sm: 6px;
+  --ant-switch-inner-max-margin-sm: 18px;
+
+  .form-check-input {
+    position: relative;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: rgba(0,0,0,0.88) !important;
+    line-height: var(--ant-switch-track-height) !important;
+    list-style: none !important;
+    display: inline-block !important;
+    min-width: var(--ant-switch-track-min-width) !important;
+    height: var(--ant-switch-track-height) !important;
+    vertical-align: middle !important;
+    background: rgba(0,0,0,0.25) !important;
+    border: 0 !important;
+    border-radius: 100px !important;
+    cursor: pointer !important;
+    transition: all 0.2s !important;
+    user-select: none !important;
+
+    &:before {
+      position: absolute;
+      background-color: var(--ant-switch-handle-bg) !important;
+      border-radius: 100% !important;
+      border: 0 !important;
+      top: var(--ant-switch-track-padding);
+      inset-inline-start: var(--ant-switch-track-padding);
+      width: var(--ant-switch-handle-size);
+      height: var(--ant-switch-handle-size);
+      transition: all 0.2s ease-in-out;
+      content: "";
+    }
+
+    &:after {
+      position: absolute;
+      top: var(--ant-switch-track-padding);
+      inset-inline-start: var(--ant-switch-track-padding);
+      width: var(--ant-switch-handle-size);
+      height: var(--ant-switch-handle-size);
+      inset-inline-end: 0;
+      bottom: 0;
+      background-color: var(--ant-switch-handle-bg) !important;
+      border-radius: calc(var(--ant-switch-handle-size) / 2);
+      border: 0 !important;
+      transition: all 0.2s ease-in-out;
+      content: "";
+    }
+
+    &:checked {
+      --form-switch-bg: none !important;
+      background-color: map-get($blue-light, 6) !important;
+
+      &:hover {
+        background-color: map-get($blue-light, 5) !important;
+      }
+
+      &:before {
+        inset-inline-start: calc(100% - calc(var(--ant-switch-handle-size) + var(--ant-switch-track-padding)));
+      }
+      &:after {
+        inset-inline-start: calc(100% - calc(var(--ant-switch-handle-size) + var(--ant-switch-track-padding)));
+      }
+
+      &:active {
+        filter: none !important;
+        &:after {
+          width: 23.4px;
+          inset-inline-start: calc(100% - calc(var(--ant-switch-handle-size) + var(--ant-switch-track-padding) + 5.4px));
+        }
+      }
+    }
+
+    &:not(:checked) {
+      &:hover {
+        background-color: rgba(0,0,0,0.45) !important;
+      }
+
+      &:active {
+        filter: none !important;
+        &:after {
+          width: 23.4px;
+          inset-inline-start: calc(var(--ant-switch-track-padding));
+        }
+      }
+    }
+
+    &:focus {
+      box-shadow: none !important;
+      //animation: pulse-shadow 1s both ease-in-out;
+    }
+
+    &:disabled {
+      cursor: not-allowed !important;
+      opacity: 0.65 !important;
+    }
+  }
+}
+
+@keyframes pulse-shadow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2) !important;
+  }
+  50% {
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4) !important;
+  }
+  100% {
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0) !important;
+  }
+}

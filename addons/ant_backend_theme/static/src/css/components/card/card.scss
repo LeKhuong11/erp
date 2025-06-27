@@ -1,0 +1,17 @@
+.o_kanban_record {
+    color: rgba(0, 0, 0, 0.88) !important;
+    background: #ffffff !important;
+    overflow: hidden;
+    border-radius: 8px !important
+}
+
+.o_kanban_renderer .o_kanban_record:not(.o_legacy_kanban_record):not(.o_kanban_ghost) {
+    border: 1px solid #f0f0f0 !important;
+    background: #ffffff !important;
+    margin-bottom: 8px !important;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03), 0 1px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.02);
+}
+
+.o_kanban_renderer .o_kanban_group.o_column_folded .o_column_title {
+    left: 14px !important;
+}
