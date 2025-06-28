@@ -1,0 +1,159 @@
+// INPUT
+input.o_input,
+.o_input:not(:has(.o_input)) {
+  min-width: 4ch !important;
+  padding: 4px 11px !important;
+
+  border: 1px solid map-get($color-border-light, default) !important;
+  border-radius: map-get($border-radii, "default") !important;
+
+  transition: all 0.2s;
+
+  &:hover {
+    border-color: map-get($blue-light, 5) !important;
+  }
+
+  &:focus {
+    border-color: map-get($blue-light, 6) !important;
+    box-shadow: 0 0 0 2px rgba(5,145,255,0.1) !important;
+  }
+
+  &:disabled {
+    background-color: rgba(0,0,0,0.04) !important;
+    cursor: not-allowed !important;
+  }
+}
+
+.o_input:has(.o_input), .o_searchview_input {
+  border: none;
+
+  &:focus {
+    border: 1px solid map-get($color-border-light, default) !important;
+  }
+}
+
+.o_searchview {
+  border: 1px solid map-get($color-border-light, default) !important;
+
+  .o_input {
+    border: none !important;
+
+    &:hover {
+      border: none !important;
+    }
+
+    &:focus {
+      border: none !important;
+      box-shadow: none !important;
+    }
+  }
+}
+
+.o_field_monetary {
+  span.o_input {
+    border: none !important;
+  }
+  input.o_input {
+    width: 150px;
+    margin-right: -4px;
+  }
+}
+
+// Xử lý trường hợp đặc biệt (input tiền tệ)
+span.o_input:has(span.o_monetary_ghost_value) {
+  span:not(.o_monetary_ghost_value) {
+    text-align: left !important;
+    display: block;
+    flex: 1;
+  }
+}
+
+.o_field_monetary.o_field_highlight {
+  span.o_input:has(span.o_monetary_ghost_value) + input.o_input {
+    padding-right: 24px !important;
+    width: 100% !important;
+  }
+
+  span.o_input:has(span.o_monetary_ghost_value) {
+    height: 100%;
+    padding-right: 2px !important;
+    padding-left: 8px !important;
+
+    .o_monetary_ghost_value {
+      display: block !important;
+  
+      font-family: inherit;
+      font-size: inherit;
+      // line-height: inherit;
+      font-weight: inherit;
+  
+      font-feature-settings: normal;
+      font-kerning: auto;
+      font-optical-sizing: auto;
+      font-size-adjust: none;
+      font-stretch: 100%;
+      font-style: normal;
+      font-variant-alternates: normal;
+      font-variant-caps: normal;
+      font-variant-east-asian: normal;
+      font-variant-emoji: normal;
+      font-variant-ligatures: normal;
+      font-variant-numeric: normal;
+      font-variant-position: normal;
+      font-variation-settings: normal;
+      letter-spacing: normal;
+      line-height: 21px;
+    }
+
+    span:not(.o_monetary_ghost_value) {
+      min-width: 20px !important;
+      margin-left: 2px;
+    }
+  }
+
+  span.opacity-0 {
+    display: none !important;
+  }
+  span.opacity-0 + input.o_input {
+    padding-left: 18px !important;
+  }
+
+}
+
+.o_field_monetary.o_input_13ch {
+  span.o_input:has(span.o_monetary_ghost_value) + input.o_input {
+    padding-right: 36px !important;
+    width: 100% !important;
+  }
+
+  span.o_input:has(span.o_monetary_ghost_value) {
+    height: 100%;
+    padding-right: 4px !important;
+    padding-left: 12px !important;
+
+    .o_monetary_ghost_value {
+      letter-spacing: 1.01px;
+      display: block !important;
+
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      font-weight: inherit;
+    }
+
+    span:not(.o_monetary_ghost_value) {
+      min-width: 32px !important;
+    }
+  }
+
+  span.opacity-0 {
+    display: none !important;
+  }
+  span.opacity-0 + input.o_input {
+    padding-left: 26px !important;
+  }
+
+}
+.o_input.o_user_emails {
+  margin-top: 0px !important;
+}

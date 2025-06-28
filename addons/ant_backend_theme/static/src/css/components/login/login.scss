@@ -1,0 +1,100 @@
+#wrapwrap > main {
+    background: #f8f8fb;
+}
+
+.oe_login_form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0.75rem 1.5rem rgba(18,38,63,.03);
+
+    .login-container {
+        .login-header {
+            text-align: center;
+            margin-bottom: 2rem;
+
+            .company-logo {
+                max-width: 120px;
+                margin-bottom: 1rem;
+            }
+
+            .login-title {
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: #333;
+                margin-bottom: 0.5rem;
+            }
+
+            .login-subtitle {
+                color: #666;
+                font-size: 0.875rem;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+
+            label {
+                display: block;
+                margin-bottom: 0.5rem;
+                font-weight: 500;
+                color: #333;
+            }
+
+            .input-group {
+                position: relative;
+
+                .input-icon {
+                    position: absolute;
+                    left: 1rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: #666;
+                }
+
+                input {
+                    width: 100%;
+                    padding: 0.75rem 1rem 0.75rem 2.5rem;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                    font-size: 0.875rem;
+                    transition: all 0.2s;
+
+                    &:focus {
+                        border-color: #556ee6;
+                        box-shadow: 0 0 0 0.2rem rgba(85,110,230,.25);
+                        outline: none;
+                    }
+                }
+            }
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 0.75rem;
+            background: #556ee6;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+
+            &:hover {
+                background: #485ec4;
+            }
+        }
+
+        .forgot-password {
+            color: #556ee6;
+            text-decoration: none;
+            font-size: 0.875rem;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+} 

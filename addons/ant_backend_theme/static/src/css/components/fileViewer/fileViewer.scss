@@ -1,0 +1,141 @@
+.o-FileViewer {
+    .o-FileViewer-header {
+        background-color: #111a2c !important;
+        .o-FileViewer-headerButton > a {
+            gap: 4px;
+            align-items: center !important;
+        }
+    }
+
+    .o-FileViewer-main, .o-FileViewer-zoomer {
+        padding: 56px 0 !important;
+    }
+    
+    .o-FileViewer-view {
+        border-radius: 8px;
+        box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    .o-FileViewer-toolbarButton {
+        color: rgba(255,255,255,0.65) !important;
+        background-color: rgba(0, 0, 0, 0.1) !important;
+        &:hover {
+            color: rgba(255,255,255,0.85) !important;
+        }
+    }
+
+    .o-FileViewer-toolbarButton:first-child {
+        border-top-left-radius: 16px !important;
+        border-bottom-left-radius: 16px !important;
+    }
+    .o-FileViewer-toolbarButton:last-child {
+        border-top-right-radius: 16px !important;
+        border-bottom-right-radius: 16px !important;
+    }
+
+    .bg-dark {
+        --background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    [class^="oi-"],
+    [class*=" oi-"] {
+        speak: never;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    [class^="oi-"] [class^="path"]:before,
+    [class*=" oi-"] [class^="path"]:before,
+    [class^="oi-"]:before,
+    [class*=" oi-"]:before {
+        font-family: "iconsax" !important;
+        doiplay: inline-block;
+        color: inherit;
+        font-style: normal;
+        font-weight: normal;
+        speak: never;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .fa:before {
+        font-family: "iconsax" !important;
+        speak: never;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .oi {
+        font-family: "iconsax" !important;
+        speak: never;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .oi:before,
+    .fa:before {
+        font-size: 20px !important;
+        vertical-align: middle !important;
+        text-rendering: geometricPrecision;
+    }
+
+    /* 🔹 Icono close-circle */
+    .fa-times:before {
+        content: "\E012";
+    }
+
+    /* 🔹 Icono arrow-left-02 */
+    .oi-chevron-left:before {
+        content: "\E008";
+    }
+
+    /* 🔹 Icono arrow-right-02 */
+    .oi-chevron-right:before {
+        content: "\E009";
+    }
+
+    /* 🔹 Icono search-zoom-in-1 */
+    .fa-plus:before {
+        content: "\E00C";
+    }
+
+    /* 🔹 Icono search */
+    .fa-search:before {
+        content: "\E00D";
+    }
+
+    /* 🔹 Icono search-zoom-out-1 */
+    .fa-minus:before {
+        content: "\E00E";
+    }
+
+    /* 🔹 Icono rotate-right */
+    .fa-repeat:before {
+        content: "\E00F";
+    }
+
+    /* 🔹 Icono printer */
+    .fa-print:before {
+        content: "\E010";
+    }
+
+    /* 🔹 Icono import-arrow-01 */
+    .fa-download:before {
+        content: "\E011";
+    }
+}

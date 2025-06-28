@@ -1,0 +1,74 @@
+// Text Colors
+$color-text-light: (default: rgba(0, 0, 0, 0.88));
+$color-text-dark: (default: rgba(255, 255, 255, 0.85));
+$color-text-secondary-light: (default: rgba(0, 0, 0, 0.65));
+$color-text-secondary-dark: (default: rgba(255, 255, 255, 0.65));
+$color-text-tertiary-light: (default: rgba(0, 0, 0, 0.45));
+$color-text-tertiary-dark: (default: rgba(255, 255, 255, 0.45));
+$color-text-quaternary-light: (default: rgba(0, 0, 0, 0.25));
+$color-text-quaternary-dark: (default: rgba(255, 255, 255, 0.25));
+$color-text-light-solid: #ffffff;
+$color-text-heading-light: map-get($color-text-light, default);
+$color-text-heading-dark: map-get($color-text-dark, default);
+$color-text-label-light: map-get($color-text-secondary-light, default);
+$color-text-label-dark: map-get($color-text-secondary-dark, default);
+$color-text-description-light: map-get($color-text-tertiary-light, default);
+$color-text-description-dark: map-get($color-text-tertiary-dark, default);
+$color-text-disabled-light: map-get($color-text-quaternary-light, default);
+$color-text-disabled-dark: map-get($color-text-quaternary-dark, default);
+$color-text-placeholder-light: map-get($color-text-quaternary-light, default);
+$color-text-placeholder-dark: map-get($color-text-quaternary-dark, default);
+
+
+// Icon Colors
+$color-icon-light: map-get($color-text-tertiary-light, default);
+$color-icon-dark: map-get($color-text-tertiary-dark, default);
+$color-icon-hover-light: map-get($color-text-light, default);
+$color-icon-hover-dark: map-get($color-text-dark, default);
+
+// Border Colors
+$color-border-light: (default: #d9d9d9);
+$color-border-dark: (default: #424242);
+$color-border-secondary-light: (default: #f0f0f0);
+$color-border-secondary-dark: (default: #303030);
+$color-split-light: rgba(0, 0, 0, 0.06);
+$color-split-dark: rgba(255, 255, 255, 0.06);
+
+
+// Fill Colors
+$color-fill-light: (default: rgba(0, 0, 0, 0.15));
+$color-fill-dark: (default: rgba(255, 255, 255, 0.18));
+$color-fill-secondary-light: (default: rgba(0, 0, 0, 0.06));
+$color-fill-secondary-dark: (default: rgba(255, 255, 255, 0.12));
+$color-fill-tertiary-light: (default: rgba(0, 0, 0, 0.04));
+$color-fill-tertiary-dark: (default: rgba(255, 255, 255, 0.08));
+$color-fill-quaternary-light: (default: rgba(0, 0, 0, 0.02));
+$color-fill-quaternary-dark: (default: rgba(255, 255, 255, 0.04));
+$color-fill-content-light: map-get($color-fill-secondary-light, default);
+$color-fill-content-dark: map-get($color-fill-secondary-dark, default);
+$color-fill-content-hover-light: map-get($color-fill-light, default);
+$color-fill-content-hover-dark: map-get($color-fill-dark, default);
+$color-fill-alter-light: map-get($color-fill-quaternary-light, default);
+$color-fill-alter-dark: map-get($color-fill-quaternary-dark, default);
+
+
+// Background Colors
+$color-bg-container-light: (default: #ffffff);
+$color-bg-container-dark: (default: #141414);
+$color-bg-elevated-light: (default: #ffffff);
+$color-bg-elevated-dark: (default: #1f1f1f);
+$color-bg-layout-light: (default: #f5f5f5);
+//$color-bg-layout-dark: map-get($color-bg-base-dark, default);
+$color-bg-mask-light: rgba(0, 0, 0, 0.45);
+$color-bg-mask-dark: rgba(0, 0, 0, 0.45);
+$color-bg-spotlight-light: rgba(0, 0, 0, 0.85);
+$color-bg-spotlight-dark: #424242;
+$color-bg-container-disabled-light: map-get($color-text-tertiary-light, default);
+$color-bg-container-disabled-dark: map-get($color-text-tertiary-dark, default);
+$color-bg-text-active-light: map-get($color-fill-light, default);
+$color-bg-text-active-dark: map-get($color-fill-dark, default);
+$color-bg-text-hover-light: map-get($color-fill-secondary-light, default);
+$color-bg-text-hover-dark: map-get($color-fill-secondary-dark, default);
+$color-border-bg-light: map-get($color-bg-container-light, default);
+$color-border-bg-dark: map-get($color-bg-container-dark, default);
+

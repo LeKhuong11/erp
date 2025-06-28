@@ -1,0 +1,765 @@
+// =======================================
+// ANT DESIGN V5 APPS MENU POPOVER
+// =======================================
+
+// Apps Menu Trigger Button
+.ant-apps-menu-wrapper {
+    margin-left: 4px;
+    position: relative;
+    display: inline-block;
+}
+
+.ant-apps-menu-trigger {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    position: relative;
+    overflow: hidden;
+    height: 40px;
+
+    // Shimmer effect
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(22, 119, 255, 0.1), transparent);
+        transition: left 0.6s;
+    }
+
+    // Normal state - ensure text and icon are visible
+    .ant-apps-icon {
+        transition: all 0.3s ease;
+        flex-shrink: 0;
+    }
+
+    .ant-apps-text {
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    // Hover state - maintain text and icon visibility
+    &:hover {
+        background: #f0f0f0;
+        border-color: #d9d9d9;
+
+        &::before {
+            left: 100%;
+        }
+
+        .ant-apps-icon {
+            color: #1677ff !important;
+            transform: rotate(180deg);
+        }
+
+        .ant-apps-text {
+            color: #1677ff !important;
+        }
+    }
+
+    // Focus state
+    &:focus {
+        outline: none;
+        border-color: #1677ff;
+    }
+
+    // Active state (when menu is open)
+    &.ant-apps-active {
+        background: #1677ff;
+        color: white;
+        border-color: #1677ff;
+
+        .ant-apps-icon {
+            color: white !important;
+            transform: rotate(180deg);
+        }
+
+        .ant-apps-text {
+            color: white !important;
+        }
+    }
+}
+
+// Apps Popover Container - Default hidden state
+.ant-apps-popover {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 16px;
+    background: white;
+    border: 1px solid #f0f0f0;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+    width: 480px;
+    max-height: 600px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px) scale(0.95);
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    z-index: 1001;
+    backdrop-filter: blur(8px);
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -6px;
+        left: 24px;
+        width: 12px;
+        height: 12px;
+        background: white;
+        border: 1px solid #f0f0f0;
+        border-bottom: none;
+        border-right: none;
+        transform: rotate(45deg);
+        z-index: -1;
+    }
+}
+
+// Show popover when trigger is active
+.ant-apps-menu-trigger.ant-apps-active+.ant-apps-popover,
+.ant-apps-menu-wrapper .ant-apps-menu-trigger.ant-apps-active~.ant-apps-popover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.ant-popover-content {
+    padding: 0;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+// Header Section
+.ant-apps-header {
+    padding: 20px 16px 16px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.ant-apps-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+
+    .ant-apps-header-icon {
+        color: #1677ff;
+        animation: sparkle 2s ease-in-out infinite;
+    }
+
+    span {
+        font-size: 18px;
+        font-weight: 600;
+        color: #262626;
+    }
+}
+
+@keyframes sparkle {
+
+    0%,
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1.1) rotate(180deg);
+    }
+}
+
+.ant-apps-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+
+    .ant-search-icon {
+        color: rgba(0, 0, 0, 0.45);
+        flex-shrink: 0;
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .ant-apps-search-input {
+        flex: 1;
+        border: none;
+        background: transparent;
+        outline: none;
+        font-size: 14px;
+        color: #262626;
+        width: 100%;
+
+        &::placeholder {
+            color: rgba(0, 0, 0, 0.45);
+        }
+    }
+}
+
+// Categories Section
+.ant-apps-categories {
+    display: flex;
+    gap: 4px;
+    padding: 16px 24px 0;
+    margin-bottom: 16px;
+}
+
+.ant-category-tab {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #595959;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+
+    &:hover {
+        background: #f0f0f0;
+        color: #1677ff;
+    }
+
+    &.ant-category-active {
+        background: #1677ff;
+        color: white;
+        box-shadow: 0 2px 4px rgba(22, 119, 255, 0.3);
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 2px;
+            background: #1677ff;
+            border-radius: 1px;
+        }
+    }
+}
+
+// Apps Grid Section
+.ant-apps-grid {
+    padding: 8px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    max-height: 320px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #d9d9d9 transparent;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #d9d9d9;
+        border-radius: 3px;
+
+        &:hover {
+            background: #bfbfbf;
+        }
+    }
+}
+
+.ant-apps-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px 20px;
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 14px;
+
+    &::before {
+        content: '📱';
+        display: block;
+        font-size: 32px;
+        margin-bottom: 12px;
+        opacity: 0.5;
+    }
+}
+
+.ant-app-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(22, 119, 255, 0.05), transparent);
+        transition: left 0.5s;
+    }
+
+    &:hover {
+        background: #f0f0f0;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+        &::before {
+            left: 100%;
+        }
+
+        .ant-app-icon {
+            transform: scale(1.1);
+        }
+
+        .ant-app-name {
+            color: #1677ff;
+        }
+    }
+
+    &:active {
+        transform: translateY(0);
+        background: rgba(22, 119, 255, 0.1);
+    }
+
+    &[style*="display: none"] {
+        display: none !important;
+    }
+}
+
+.ant-app-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    background: #f5f5f5;
+
+    // Odoo app icon (image)
+    img {
+        width: 32px;
+        height: 32px;
+        border-radius: 6px;
+        object-fit: cover;
+        z-index: 2;
+        position: relative;
+    }
+
+    // SVG fallback icon
+    svg {
+        width: 24px;
+        height: 24px;
+        color: rgba(0, 0, 0, 0.45);
+        z-index: 1;
+        position: relative;
+    }
+
+    &.ant-app-default {
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.45), #595959);
+
+        svg {
+            color: white;
+        }
+    }
+
+    // App-specific colors for fallback
+    &.ant-app-sales {
+        background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    }
+
+    &.ant-app-crm {
+        background: linear-gradient(135deg, #4ecdc4, #44bd87);
+    }
+
+    &.ant-app-inventory::before {
+        background: linear-gradient(135deg, #45b7d1, #3742fa);
+    }
+
+    &.ant-app-accounting::before {
+        background: linear-gradient(135deg, #f9ca24, #f0932b);
+    }
+
+    &.ant-app-project::before {
+        background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    }
+
+    &.ant-app-hr::before {
+        background: linear-gradient(135deg, #fd79a8, #e84393);
+    }
+
+    &.ant-app-manufacturing::before {
+        background: linear-gradient(135deg, #00b894, #00cec9);
+    }
+
+    &.ant-app-website::before {
+        background: linear-gradient(135deg, #0984e3, #74b9ff);
+    }
+
+    &.ant-app-settings::before {
+        background: linear-gradient(135deg, #636e72, #2d3436);
+    }
+
+    // When Odoo icon is present, hide the gradient background
+    &:has(img)::before {
+        display: none;
+    }
+
+    // Fallback for browsers that don't support :has()
+    &.has-odoo-icon::before {
+        display: none;
+    }
+}
+
+.ant-app-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.ant-app-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #262626;
+    margin-bottom: 2px;
+    transition: color 0.3s ease;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ant-app-desc {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.45);
+    line-height: 1.3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// Footer Section
+.ant-apps-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.ant-apps-stats {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.45);
+
+    .ant-apps-count {
+        font-weight: 500;
+    }
+
+    .ant-apps-separator {
+        color: #d9d9d9;
+        margin: 0 4px;
+    }
+
+    .ant-apps-version {
+        color: rgba(0, 0, 0, 0.45);
+    }
+}
+
+// Dark Theme Support
+.ant-dark-theme {
+    .ant-apps-menu-trigger {
+        color: #d9d9d9;
+        border-color: #434343;
+
+        .ant-apps-icon,
+        .ant-apps-text {
+            color: #d9d9d9;
+        }
+
+        &:hover {
+            background: #262626;
+            border-color: #595959;
+
+            .ant-apps-icon,
+            .ant-apps-text {
+                color: #1677ff !important;
+            }
+        }
+
+        &.ant-apps-active {
+
+            .ant-apps-icon,
+            .ant-apps-text {
+                color: white !important;
+            }
+        }
+    }
+
+    .ant-apps-popover {
+        background: #1f1f1f;
+        border-color: #434343;
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 2px 6px rgba(0, 0, 0, 0.2);
+
+        &::before {
+            background: #1f1f1f;
+            border-color: #434343;
+        }
+    }
+
+    .ant-apps-header {
+        background: linear-gradient(135deg, rgba(22, 119, 255, 0.05), rgba(82, 196, 26, 0.05));
+        border-bottom-color: #434343;
+    }
+
+    .ant-apps-footer {
+        background: #141414;
+        border-top-color: #434343;
+    }
+
+    .ant-app-item {
+        &:hover {
+            background: #262626;
+        }
+    }
+
+    .ant-apps-search {
+        background: #141414;
+        border-color: #434343;
+
+        &:focus-within {
+            background: #1f1f1f;
+        }
+    }
+
+    .ant-app-name {
+        color: #d9d9d9;
+    }
+
+    .ant-app-desc {
+        color: rgba(0, 0, 0, 0.45);
+    }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+    .ant-apps-popover {
+        width: 360px;
+        left: -120px;
+    }
+
+    .ant-apps-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+    }
+
+    .ant-app-item {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .ant-app-icon {
+        width: 36px;
+        height: 36px;
+
+        img {
+            width: 28px;
+            height: 28px;
+        }
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .ant-app-name {
+        font-size: 13px;
+    }
+
+    .ant-app-desc {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 576px) {
+    .ant-apps-menu-trigger.ant-apps-active + .ant-apps-popover,
+    .ant-apps-menu-wrapper .ant-apps-menu-trigger.ant-apps-active ~ .ant-apps-popover {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        max-height: none !important;
+        border-radius: 0 !important;
+        z-index: 1050 !important;
+        transform: translateY(0) scale(1) !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transition: none !important;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 64px; // chừa phần footer nếu có
+
+        &::before {
+            display: none;
+        }
+
+        .ant-apps-header,
+        .ant-apps-footer,
+        .ant-apps-grid,
+        .ant-apps-categories {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        .ant-apps-grid {
+            flex: 1;
+            overflow-y: auto;
+        }
+    }
+
+    body {
+        overflow: hidden; // chặn cuộn background khi mở popover
+    }
+}
+
+// Animation for app items appearing
+.ant-app-item {
+    animation: fadeInUp 0.3s ease-out;
+    animation-fill-mode: both;
+}
+
+.ant-app-item:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.ant-app-item:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.ant-app-item:nth-child(3) {
+    animation-delay: 0.15s;
+}
+
+.ant-app-item:nth-child(4) {
+    animation-delay: 0.2s;
+}
+
+.ant-app-item:nth-child(5) {
+    animation-delay: 0.25s;
+}
+
+.ant-app-item:nth-child(6) {
+    animation-delay: 0.3s;
+}
+
+.ant-app-item:nth-child(7) {
+    animation-delay: 0.35s;
+}
+
+.ant-app-item:nth-child(8) {
+    animation-delay: 0.4s;
+}
+
+.ant-app-item:nth-child(9) {
+    animation-delay: 0.45s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Header submenu styling
+.ant-sub-menu {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 46px;
+    padding: 0 16px;
+    margin-left: 24px;
+
+    .ant-sub-menu-item {
+        list-style: none;
+        height: 100%;
+
+        .ant-sub-menu-link {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding: 0 16px;
+            color: rgba(0, 0, 0, 0.85);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 0;
+                height: 2px;
+                background: #1890ff;
+                transition: all 0.3s ease;
+                transform: translateX(-50%);
+            }
+
+            &:hover {
+                color: #1890ff;
+
+                &::after {
+                    width: calc(100% - 32px);
+                }
+            }
+
+            &.ant-sub-menu-active {
+                color: #1890ff;
+
+                &::after {
+                    width: calc(100% - 32px);
+                }
+            }
+
+            .ant-sub-menu-icon {
+                margin-right: 8px;
+                font-size: 14px;
+            }
+
+            .ant-sub-menu-title {
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+    }
+}

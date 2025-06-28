@@ -1,0 +1,188 @@
+/* Main layout adjustments */
+.o_main {
+    margin-left: 256px;
+    transition: margin-left 0.2s;
+}
+
+.o_main_navbar {
+    margin-left: 256px;
+    transition: margin-left 0.2s;
+}
+
+/* When sidebar is collapsed */
+.ant-sidebar-collapsed ~ .o_main,
+.ant-sidebar-collapsed ~ .o_main_navbar {
+    margin-left: 80px;
+}
+
+/* Hide default Odoo sidebar */
+.o_web_client > .o_main > .o_sub_menu {
+    display: none !important;
+}
+
+/* Ant Design Sidebar Styles */
+.ant-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 256px;
+    background: #001529;
+    transition: all 0.2s;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.ant-sidebar-collapsed {
+    width: 80px;
+}
+
+.ant-sidebar-header {
+    height: 64px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ant-sidebar-logo {
+    display: flex;
+    align-items: center;
+    height: 32px;
+}
+
+.ant-sidebar-logo img {
+    height: 100%;
+    margin-right: 8px;
+}
+
+.ant-sidebar-logo-text {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.ant-sidebar-trigger {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.65);
+    cursor: pointer;
+    padding: 0;
+    font-size: 16px;
+}
+
+.ant-sidebar-trigger:hover {
+    color: white;
+}
+
+.ant-sidebar-menu {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px 0;
+}
+
+.ant-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    color: rgba(255, 255, 255, 0.65);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.ant-menu-item:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.ant-menu-item-selected {
+    color: white;
+    background: #1890ff;
+}
+
+.ant-menu-item-icon {
+    margin-right: 10px;
+    font-size: 16px;
+    min-width: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.ant-menu-item-icon img {
+    width: 16px;
+    height: 16px;
+}
+
+.ant-menu-item-label {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ant-menu-submenu {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.ant-menu-submenu-title {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.ant-menu-submenu-title:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.ant-menu-submenu-arrow {
+    margin-left: auto;
+    transition: transform 0.3s;
+}
+
+.ant-menu-submenu-open .ant-menu-submenu-arrow {
+    transform: rotate(180deg);
+}
+
+.ant-menu-submenu-content {
+    background: rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+/* Collapsed state styles */
+.ant-sidebar-collapsed .ant-menu-item-label,
+.ant-sidebar-collapsed .ant-menu-submenu-title span:not(.ant-menu-item-icon),
+.ant-sidebar-collapsed .ant-menu-submenu-arrow {
+    display: none;
+}
+
+.ant-sidebar-collapsed .ant-menu-item,
+.ant-sidebar-collapsed .ant-menu-submenu-title {
+    padding: 12px;
+    justify-content: center;
+}
+
+.ant-sidebar-collapsed .ant-menu-item-icon {
+    margin-right: 0;
+}
+
+/* Scrollbar styles */
+.ant-sidebar-menu::-webkit-scrollbar {
+    width: 6px;
+}
+
+.ant-sidebar-menu::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+}
+
+.ant-sidebar-menu::-webkit-scrollbar-track {
+    background: transparent;
+} 

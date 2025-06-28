@@ -1,0 +1,335 @@
+// Blue Colors - Light Theme
+$blue-light: (
+  1: #e6f4ff,
+  2: #bae0ff,
+  3: #91caff,
+  4: #69b1ff,
+  5: #4096ff,
+  6: #1677ff,
+  7: #0958d9,
+  8: #003eb3,
+  9: #002c8c,
+  10: #001d66
+);
+
+// Blue Colors - Dark Theme
+$blue-dark: (
+  1: #111a2c,
+  2: #112545,
+  3: #15325b,
+  4: #15417e,
+  5: #1554ad,
+  6: #1668dc,
+  7: #3c89e8,
+  8: #65a9f3,
+  9: #8dc5f8,
+  10: #b7dcfa
+);
+
+// Cyan Colors - Light Theme
+$cyan-light: (
+  1: #e6fffb,
+  2: #b5f5ec,
+  3: #87e8de,
+  4: #5cdbd3,
+  5: #36cfc9,
+  6: #13c2c2,
+  7: #08979c,
+  8: #006d75,
+  9: #00474f,
+  10: #002329
+);
+
+// Cyan Colors - Dark Theme
+$cyan-dark: (
+  1: #112123,
+  2: #113536,
+  3: #144848,
+  4: #146262,
+  5: #138585,
+  6: #13a8a8,
+  7: #33bcb7,
+  8: #58d1c9,
+  9: #84e2d8,
+  10: #b2f1e8
+);
+
+// Geek Blue Colors - Light Theme
+$geek-blue-light: (
+  1: #f0f5ff,
+  2: #d6e4ff,
+  3: #adc6ff,
+  4: #85a5ff,
+  5: #597ef7,
+  6: #2f54eb,
+  7: #1d39c4,
+  8: #10239e,
+  9: #061178,
+  10: #030852
+);
+
+// Geek Blue Colors - Dark Theme
+$geek-blue-dark: (
+  1: #131629,
+  2: #161d40,
+  3: #1c2755,
+  4: #203175,
+  5: #263ea0,
+  6: #2b4acb,
+  7: #5273e0,
+  8: #7f9ef3,
+  9: #a8c1f8,
+  10: #d2e0fa
+);
+
+// Gold Colors - Light Theme
+$gold-light: (
+  1: #fffbe6,
+  2: #fff1b8,
+  3: #ffe58f,
+  4: #ffd666,
+  5: #ffc53d,
+  6: #faad14,
+  7: #d48806,
+  8: #ad6800,
+  9: #874d00,
+  10: #613400
+);
+
+// Gold Colors - Dark Theme
+$gold-dark: (
+  1: #2b2111,
+  2: #443111,
+  3: #594214,
+  4: #7c5914,
+  5: #aa7714,
+  6: #d98614,
+  7: #e8b339,
+  8: #f3cc62,
+  9: #f8df8b,
+  10: #faedb5
+);
+
+// Green Colors - Light Theme
+$green-light: (
+  1: #f6ffed,
+  2: #d9f7be,
+  3: #b7eb8f,
+  4: #95de64,
+  5: #73d13d,
+  6: #52c41a,
+  7: #389e0d,
+  8: #237804,
+  9: #135200,
+  10: #092b00
+);
+
+// Green Colors - Dark Theme
+$green-dark: (
+  1: #162312,
+  2: #1d3712,
+  3: #274916,
+  4: #306317,
+  5: #3c8618,
+  6: #49aa19,
+  7: #6abe39,
+  8: #8fd460,
+  9: #b2e58b,
+  10: #d5f2bb
+);
+
+// Lime Colors - Light Theme
+$lime-light: (
+  1: #FCFFE6,
+  2: #F4FFB8,
+  3: #EAFF8F,
+  4: #D3F261,
+  5: #BAE637,
+  6: #A0D911,
+  7: #7CB305,
+  8: #5B8C00,
+  9: #3F6600,
+  10: #254000
+);
+
+// Lime Colors - Dark Theme
+$lime-dark: (
+  1: #1F2611,
+  2: #2E3C10,
+  3: #3E4F13,
+  4: #536D13,
+  5: #6F9412,
+  6: #8BBB11,
+  7: #A9D134,
+  8: #C9E75D,
+  9: #E4F88B,
+  10: #F0FAB5
+);
+
+// Magenta Colors - Light Theme
+$magenta-light: (
+  1: #FFF0F6,
+  2: #FFD6E7,
+  3: #FFA9D1,
+  4: #FF85C0,
+  5: #F759AB,
+  6: #EB2F96,
+  7: #C41D7F,
+  8: #9E1068,
+  9: #780650,
+  10: #520339
+);
+
+// Magenta Colors - Dark Theme
+$magenta-dark: (
+  1: #291321,
+  2: #40162F,
+  3: #5C1C3B,
+  4: #75204F,
+  5: #A22669,
+  6: #C82B83,
+  7: #E0529C,
+  8: #F37FB7,
+  9: #F8A8CC,
+  10: #FAD2E3
+);
+
+// Orange Colors - Light Theme
+$orange-light: (
+  1: #FFF7E6,
+  2: #FFDDA1,
+  3: #FFC069,
+  4: #FFA940,
+  5: #FF8F1F,
+  6: #FA8C16,
+  7: #D46B08,
+  8: #AD4E00,
+  9: #873800,
+  10: #612500
+);
+
+// Orange Colors - Dark Theme
+$orange-dark: (
+  1: #2B1D11,
+  2: #442A11,
+  3: #593B15,
+  4: #7C4A15,
+  5: #A66215,
+  6: #D97716,
+  7: #E89A3C,
+  8: #F3B765,
+  9: #F8CF8D,
+  10: #FAE3B7
+);
+
+// Purple Colors - Light Theme
+$purple-light: (
+  1: #F9F0FF,
+  2: #EFDBFF,
+  3: #D3ADF7,
+  4: #B37FEB,
+  5: #9254DE,
+  6: #722ED1,
+  7: #531DAB,
+  8: #391085,
+  9: #22075E,
+  10: #120338
+);
+
+// Purple Colors - Dark Theme
+$purple-dark: (
+  1: #1A1325,
+  2: #2A163A,
+  3: #3D1C4D,
+  4: #5E2069,
+  5: #7A258F,
+  6: #9227AB,
+  7: #B52ECA,
+  8: #AB37AE,
+  9: #CDA8F0,
+  10: #EBD7FA
+);
+
+// Red Colors - Light Theme
+$red-light: (
+  1: #FFF1F0,
+  2: #FFCCC7,
+  3: #FFA39E,
+  4: #FF7875,
+  5: #FF4D4F,
+  6: #F5222D,
+  7: #CF1322,
+  8: #A8071A,
+  9: #820014,
+  10: #5C0011
+);
+
+// Red Colors - Dark Theme
+$red-dark: (
+  1: #2A1215,
+  2: #43141B,
+  3: #5B181C,
+  4: #791A1F,
+  5: #A61D24,
+  6: #D32029,
+  7: #E84749,
+  8: #F37370,
+  9: #F89F9A,
+  10: #FAC8C3
+);
+
+// Volcano Colors - Light Theme
+$volcano-light: (
+  1: #FFF2E8,
+  2: #FFD8BF,
+  3: #FFBB96,
+  4: #FF9C6E,
+  5: #FF7A45,
+  6: #FA541C,
+  7: #D4380D,
+  8: #AD2102,
+  9: #871400,
+  10: #610B00
+);
+
+// Volcano Colors - Dark Theme
+$volcano-dark: (
+  1: #2B1611,
+  2: #441D12,
+  3: #592716,
+  4: #7C3118,
+  5: #AA3E19,
+  6: #D84A1B,
+  7: #E87040,
+  8: #F3956A,
+  9: #F8B692,
+  10: #FAD4BC
+);
+
+// Yellow Colors - Light Theme
+$yellow-light: (
+  1: #FFFEF6,
+  2: #FFF9B8,
+  3: #FFF566,
+  4: #FFF13D,
+  5: #FFEC3D,
+  6: #FADB14,
+  7: #D4B106,
+  8: #AD8B00,
+  9: #876800,
+  10: #614700
+);
+
+// Yellow Colors - Dark Theme
+$yellow-dark: (
+  1: #2B2611,
+  2: #443B11,
+  3: #595014,
+  4: #7C6E14,
+  5: #AA9514,
+  6: #D8BD14,
+  7: #E8D639,
+  8: #F3EA62,
+  9: #F8F48B,
+  10: #FAFAB5,
+);

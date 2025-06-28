@@ -1,0 +1,39 @@
+<odoo>
+  <templates t-name="custom_login_template" id="custom_login_template" xml:space="preserve">
+    <t t-name="custom_login" t-inherit="web.login" t-inherit-mode="extension" owl="1">
+      <xpath expr="//form[hasclass('oe_login_form')]" position="replace">
+          <p style="color:red;">🔥 TEMPLATE ĐÃ GHI ĐÈ 🔥</p>
+        <form class="oe_login_form" method="post" action="/web/login">
+          <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+          <div class="login-container">
+            <div class="login-header">
+              <img t-if="company_logo" t-att-src="company_logo" class="company-logo"/>
+              <h2 class="login-title">Welcome Back</h2>
+              <p class="login-subtitle">Please sign in to continue</p>
+            </div>
+            <div class="form-group">
+              <label for="login">Username</label>
+              <div class="input-group">
+                <i class="fa fa-user input-icon"/>
+                <input type="text" name="login" id="login" class="form-control" placeholder="Enter your username" required="required"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <div class="input-group">
+                <i class="fa fa-lock input-icon"/>
+                <input type="password" name="password" id="password" class="form-control" placeholder="Enter your password" required="required"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+            </div>
+            <div class="form-group text-center">
+              <a href="/web/reset_password" class="forgot-password">Forgot Password?</a>
+            </div>
+          </div>
+        </form>
+      </xpath>
+    </t>
+  </templates>
+</odoo>

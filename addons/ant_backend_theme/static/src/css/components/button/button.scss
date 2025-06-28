@@ -1,0 +1,102 @@
+.btn {
+    border-radius: 8px !important;
+    font-size: 14px !important;
+
+
+    &.btn-primary {
+        background: #1677ff !important;
+        border-color: #1677ff !important;
+        color: #fff !important;
+        box-shadow: 0 2px 0 rgba(5, 145, 255, 0.1) !important;
+
+        &:hover {
+            background: #4096ff !important;
+            border-color: #4096ff !important;
+            color: #fff !important;
+        }
+
+        &:active {
+
+            background: #0958d9 !important;
+            border-color: #0958d9 !important;
+            color: #fff !important;
+            box-shadow: none !important;
+        }
+    }
+
+    &.btn-secondary {
+        --btn-color: rgba(0, 0, 0, 0.88) !important;
+        --btn-bg: #ffffff !important;
+        --btn-border-color: #d9d9d9 !important;
+        --btn-hover-color: #4096ff !important;
+        --btn-hover-bg: #ffffff !important;
+        --btn-hover-border-color: #4096ff !important;
+        --btn-active-color: #4096ff !important;
+        --btn-active-bg: #ffffff !important;
+        --btn-active-border-color: #4096ff !important;
+        --btn-active-shadow: none !important;
+        --btn-disabled-color: rgba(0, 0, 0, 0.25) !important;
+        --btn-disabled-bg: rgba(0, 0, 0, 0.04) !important;
+        --btn-disabled-border-color: #d9d9d9 !important;
+
+        &.o_pager_previous,
+        &.o_pager_next {
+            border: none !important;
+            background: none !important;
+
+            &:hover {
+                color: rgba(0, 0, 0, 0.88) !important;
+                background: rgba(0, 0, 0, 0.06) !important;
+                border: none !important;
+            }
+        }
+
+        &:disabled {
+            cursor: not-allowed !important;
+        }
+    }
+}
+
+.o_searchview_dropdown_toggler {
+    border-top-right-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+
+.btn-group,
+.o-form-buttonbox {
+
+    .btn,
+    div {
+        border-radius: 0 !important;
+
+        &:hover {
+            z-index: 1 !important;
+        }
+
+        &:not(:first-child) {
+            margin-left: -1px !important;
+        }
+
+        h5 {
+            margin: 0 !important;
+        }
+    }
+
+    .btn:first-child,
+    div:first-child {
+        border-top-left-radius: 8px !important;
+        border-bottom-left-radius: 8px !important;
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+    }
+
+    .btn:last-child,
+    div:last-child {
+        border-top-right-radius: 8px !important;
+        border-bottom-right-radius: 8px !important;
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+    }
+}
