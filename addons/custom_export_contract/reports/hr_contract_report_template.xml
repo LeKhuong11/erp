@@ -1,43 +1,43 @@
 <odoo>
     <template id="report_contract_document" name="New Contract Document">
-        <t t-call="web.html_container">
-            <t t-foreach="docs" t-as="o">
-                <div class="container">
-                    <header>
-                        <div class="header">
-                            <div class="header-content d-flex justify-content-between align-items-center">
-                                <div class="logo ">
-                                    <img t-att-src="'/custom_export_contract/static/src/images/logo-nk.jpg'" style="width: 135px;"/>
-                                </div>
-                                <div>
-                                    <h2 class="fs-4">CÔNG TY TNHH CUNG ỨNG NHÂN LỰC NHÂN KIỆT</h2>
-                                    <p class="text-left fs-5">Số 57 Lê Thị Hồng Gấm, P. Nguyễn Thái Bình, Quận 1, TP. HCM</p>
-                                    <div class="d-flex justify-content-between">
-                                        <p><strong class="text-decoration-underline">Email:</strong> <span>info@nhankiet.vn</span></p>
-                                        <p><strong class="text-decoration-underline">Website:</strong> <span>www.nhankiet.vn</span></p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <p><strong class="text-decoration-underline">Tel:</strong> <span>028.3505 4224</span></p>
-                                        <p><strong class="text-decoration-underline">VP HCM:</strong> <span>028.3821 3955</span></p>
-                                        <p><strong class="text-decoration-underline">VP Hà Nội:</strong> <span>024.3763 3119</span></p>
-                                    </div>
-                                </div>
+        <t t-call="web.basic_layout">
+            <div class="page">
+                <header>
+                    <div class="header-section">
+                        <div class="header-content d-flex justify-content-between">
+                            <div class="logo ">
+                                <img t-att-src="'/custom_export_contract/static/src/images/logo-nk.jpg'" style="width: 155px;"/>
                             </div>
-                            <div class="header-title d-flex justify-content-center mt-3">
-                                <div class="text-center">
-                                    <h2 class="fs-4">HỢP ĐỒNG LAO ĐỘNG</h2>
-                                    <p>Số: <span>654668879</span></p>
+                            <div>
+                                <h2 class="font-weight-bold">CÔNG TY TNHH CUNG ỨNG NHÂN LỰC NHÂN KIỆT</h2>
+                                <p style="font-size: 18px;" class="font-weight-bold">Số 57 Lê Thị Hồng Gấm, P. Nguyễn Thái Bình, Quận 1, TP. HCM</p>
+                                <div class="d-flex justify-content-between">
+                                    <p><strong class="text-decoration-underline fs-6">Email:</strong> <span>info@nhankiet.vn</span></p>
+                                    <p><strong class="text-decoration-underline fs-6">Website:</strong> <span>www.nhankiet.vn</span></p>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p><strong class="text-decoration-underline fs-6">Tel:</strong> <span>028.3505 4224</span></p>
+                                    <p><strong class="text-decoration-underline fs-6">VP HCM:</strong> <span>028.3821 3955</span></p>
+                                    <p><strong class="text-decoration-underline fs-6">VP Hà Nội:</strong> <span>024.3763 3119</span></p>
                                 </div>
                             </div>
                         </div>
-                        <hr />
-                    </header>
-                    <t t-call="web.external_layout">
+                        <div class="header-title d-flex justify-content-center mt-4">
+                            <div class="text-center">
+                                <h2 class="fs-5">HỢP ĐỒNG LAO ĐỘNG</h2>
+                                <p>Số: <span>654668879</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                
+                <t t-foreach="docs" t-as="o">
+                    <div class="container">
                         <div class="contract-report">
                             <div class="page">
                                 <div class="represent mb-3">
                                     <h2>CÔNG TY TNHH CUNG ỨNG NHÂN LỰC NHÂN KIỆT</h2>
-                                    <h2>(Gọi tắt là "Nhân Kiệt")</h2>
+                                    <h2>(Gọi tắt là <i>"Nhân Kiệt"</i>)</h2>
                                     <p><strong>Địa chỉ:</strong> <span>Địa chỉ : 57 Lê Thị Hồng Gấm, P. Nguyễn Thái Bình, Quận 1, Hồ Chí Minh</span></p>
                                     <div class="d-flex">
                                         <p><strong>Người đại diện:</strong> <span>Đỗ Huy Lê</span></p>
@@ -57,19 +57,127 @@
                                     <p>Địa chỉ thường trú: <span t-field="o.employee_id.permanent_address"/></p>
                                     <p>Số CMND/CCCD/HC: <span t-field="o.employee_id.cccd" />. Ngày: <span t-field="o.employee_id.issue_date_id_card"/>. Tại: <span t-field="o.employee_id.issue_place_id_card"/></p>
                                     <p>Hai bên cùng thoả thuận ký kết <span class="text-blue">hợp đồng lao động</span> một dạng hợp đồng mà Người lao động làm việc và chịu sự quản lý, điều hành bởi <span class="text-blue">Công ty khách hàng</span> theo hợp đồng <span class="text-danger" t-field="o.name" /> ký với người sử dụng lao động với những điều khoản sau đây:</p>
+                                    <p><strong>Điều 1: Thời hạn của hợp đồng lao động; Công việc và địa điểm làm việc: </strong></p>
+                                    <ul>
+                                        <li>Thời hạn hợp đồng: xác định thời hạn từ ngày: <span t-field="o.date_start"/> đến ngày: <span t-field="o.date_end"/></li>
+                                        <p class="text-info">Tuy nhiên, hợp đồng có thể được chấm dứt trước thời hạn khi công việc đã hoàn thành, theo quy định tại Khoản 2 Điều 34 Bộ luật Lao động 2019. </p>
+                                        <li>Địa điểm làm việc: Tại <span t-field="o.employee_id.company_id.name"/> hoặc Văn Phòng Đại Diện của Nhân Kiệt.</li>
+                                        <li class="text-info">Công việc phải làm:  Theo nội dung công việc <span t-field="o.job_id.name"/> được Nhân Kiệt phân công nhằm phục vụ cho dự án hoặc hợp đồng dịch vụ cụ thể giữa Nhân Kiệt và <span t-field="o.employee_id.company_id.name"/>.</li>
+                                    </ul>
+                                    <p class="text-info"><strong>Tiêu chí xác định công việc đã hoàn thành bao gồm một trong các trường hợp sau: </strong></p>
+                                    <p class="text-info">(i) <span t-field="o.employee_id.company_id.name"/> có <strong>văn bản hoặc thông báo</strong> xác nhận đã kết thúc công việc, dự án, hoặc chấm dứt hợp đồng dịch vụ tại vị trí mà người lao động đang đảm nhận;</p>
+                                    <p class="text-info">(ii) Người lao động đã <strong>hoàn tất toàn bộ nhiệm vụ, nội dung công việc được phân công</strong> theo kế hoạch công việc ban đầu.</p>
+                                    
+                                    <p><strong>Điều 2: Mức lương</strong></p>
+                                    <ul>
+                                        <li>Lương cơ bản  <span class="text-danger" t-field="o.wage"/> đồng/tháng  (công chuẩn 26)</li>
+                                    </ul>
+                                    <p><strong>Điều 3: Phụ cấp khác theo tiết c2 điểm c khoản 5 Điều 3 của TT số 10/2020/TT-BLĐTBXH</strong></p>
+                                    <p class="text-left">ĐVT: «DVT» (công chuẩn 26 ngày/tháng)</p>
+                                    <table class="table table-sm table-bordered" style="width:100%">
+                                        <tbody>
+                                            <tr>
+                                                <td>PC đi lại(*)</td>
+                                                <td><span>500</span></td>
+                                                <td>Thưởng chuyên cần(*)</td>
+                                                <td><span>500</span></td>
+                                            </tr>
+                                            
+                                            <tr>
+                                                <td>PC nhà ở(*)</td>
+                                                <td><span>500</span></td>
+                                                <td>Bảo hiểm trả vào lương</td>
+                                                <td><span>500</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>PC cơm(*)</td>
+                                                <td><span>500</span></td>
+                                                <td>PC điện thoại...</td>
+                                                <td><span>500</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Phép năm</td>
+                                                <td><span>500</span></td>
+                                                <td>Khác(*)...</td>
+                                                <td><span>500</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Lương tháng 13</td>
+                                                <td><span>500</span></td>
+                                                <th><strong>Tổng phụ cấp: </strong></th>
+                                                <th><span>5.125.000</span></th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <ul>
+                                        <li>Ghi chú: Tiền chuyên cần và các loại phụ cấp khác được đánh dấu (*) có thể sẽ không nhận đủ nếu người lao động có nghỉ không hưởng lương; Mức không được hưởng cho mỗi ngày nghỉ không hưởng là «Ty_Le_tru» của <span>9.056.000 VNĐ</span> </li>
+                                        <li>Hình thức trả lương: Chuyển khoản ngày 10; Tiền mặt ngày 15 nếu rơi vào ngày Chủ Nhật, ngày nghỉ thì tiền lương sẽ chuyển vào ngày làm việc liền sau đó. </li>
+                                        <li>Chế độ nâng bậc, nâng lương: Áp dụng khi khách hàng tăng cho người lao động. </li>
+                                    </ul>
+
+                                    <p><strong>Điều 4:  Thời giờ làm việc, thời giờ nghỉ ngơi</strong></p>
+                                    <ul>
+                                        <li>Thời giờ làm việc tiêu chuẩn: «GioCongChuan», «CongChuan».</li>
+                                        <li>Chế độ nghỉ ngơi: Ngày nghỉ hàng tuần được nghỉ luân phiên theo lịch phân ca, ngày nghỉ hàng tuần không bắt buộc là ngày Chủ Nhật nhưng đảm bảo nghỉ 4 ngày/tháng. Lịch nghỉ Lễ Tết theo quy định và sẽ có thông báo cho người lao động. </li>
+                                    </ul>
+
+                                    <p><strong>Điều 5: Trang bị bảo hộ lao động, đồng phục, công cụ dụng cụ</strong></p>
+                                    <ul>
+                                        <li>Người lao động được trang bị đồng phục miễn phí theo yêu cầu công việc, người lao động bắt buộc phải tuân thủ quy định về an toàn lao động và sử dụng trang thiết bị bảo hộ lao động tại nơi làm việc. Khi kết thúc công việc hoặc chấm dứt hợp đồng, người lao động được yêu cầu trả đồng phục, bảo hộ lao động, công cụ, dụng cụ, trang thiết bị được giao; nếu không phải bồi thường cho “Nhân Kiệt” hoặc “Công ty khách hàng”</li>
+                                        <li>Theo từng công việc, công cụ, dụng cụ sẽ được phân phát cụ thể, Người lao động có trách nhiệm quản lý, sử dụng đúng mục đích của công cụ dụng cụ. </li>
+                                    </ul>
+
+                                    <p><strong>Điều 6:  BHXH, BHYT, BHTN, báo giảm BHXH kịp thời. </strong></p>
+                                    <ul>
+                                        <li>BHXH (Bảo hiểm xã hội), BHYT (Bảo hiểm y tế) BHTN (bảo hiểm thất nghiệp) được đóng cho người lao động có số ngày làm việc phù hợp quy định tại Khoản 4, 5 và 6 Điều 42 Quyết định 595/QĐ-BHXH ngày 14/04/2017. </li>
+                                        <li>Người sử dụng lao động đóng 21.5%, người lao động đóng 10.5% trên mức lương lương cơ bản; đây cũng là mức lương tính trả lương nghỉ lễ tết, và phép năm (nếu chưa trả).</li>
+                                        <li>Bảo hiểm tai nạn (Bảo hiểm tai nạn 24/24) sẽ được “Nhân Kiệt” xem xét mua cho người lao động mức từ 50.000.000 đồng/người/vụ/năm nếu xét thấy cần thiết.</li>
+                                        <li>Nếu người lao động xin nghỉ việc (hoặc Giảm BHXH) tháng N thì cam kết thông báo hoặc viết đơn xin nghỉ việc trước ngày 25 của tháng N-1 để “Nhân Kiệt” kịp thời báo giảm BHXH kịp trong tháng theo quy định của cơ quan BHXH, Nếu người lao động vi phạm cam kết này, dẫn đến việc cơ quan BHXH thu tiền thẻ BHYT thì người lao động phải chi trả 4.5%/tháng tiền nay cho cơ quan BHXH.</li>
+                                    </ul>
+
+                                    <p><strong>Điều 7: Đào tạo, bồi dưỡng, nâng cao trình độ, kỹ năng nghề.</strong></p>
+                                    <ul>
+                                        <li>Người lao động được đào tạo, bồi dưỡng, nâng cao trình độ, kỹ năng nghề theo nhu cầu công việc, các bên tuân thủ quyền và nghĩa vụ theo quy định về chi phí đào tạo, và phải đảm bảo thời gian làm việc sau đào tạo, trường hợp vi phạm phải bồi thường chi phí đào tạo.</li>
+                                    </ul>
+
+                                    <p><strong>Điều 8. Quy định về xử lý dữ liệu cá nhân.</strong></p>
+                                    <ul>
+                                        <li>Dữ liệu cá nhân được tuân thủ theo quy định của Nghị Định 13/2023/NĐ-CP về bảo vệ dữ liệu cá nhân. Bên B đồng ý cho phép bên A được sử dụng, xử lý dữ liệu cá nhân của bên B để xác nhận nhân thân trong các phần mềm do bên A phát triển và quản lý, và các nghiệp vụ liên quan tới quản lý lĩnh vực nhân sự, tiền lương, tạm ứng, lĩnh vực kế toán, thuế, bảo hiểm xã hội, và cung cấp cho khách hàng nơi bên B đang làm việc, hoặc sẽ làm việc, hoặc cung cấp cho cơ quan chức năng hoặc bên thứ 3 liên quan tới việc thực hiện hợp đồng lao động hoặc để bảo vệ quyền lợi của bên B theo đúng theo quy định pháp luật. </li>
+                                    </ul>
+
+                                    <p><strong>Điều 9. Thỏa thuận khác.</strong></p>
+                                    <ul>
+                                        <li>Hai bên thỏa thuận trước rằng khi hợp đồng đang trong thời hạn có hiệu lực tại Điều 1 Hợp Đồng này, hoặc đã được gia hạn theo khoản 2, điều 20 của Bộ luật lao động mà dự án (hợp đồng) giữa “Nhân Kiệt” và “Công ty khách hàng” kết thúc, hoặc “Công ty khách hàng” báo giảm người lao động theo nhu cầu sản xuất hoặc <span class="text-info"><i>“Công ty khách hàng”</i> xác nhận đã hoàn thành công việc tại vị trí người lao động đảm nhận</span> hoặc theo đặc thù của “Công ty khách hàng”. Thì hợp đồng lao động này được thống nhất là chấm dứt theo thỏa thuận tại khoản 2 điều 34 Bộ luật lao động mà không bên nào vi phạm điều khoản chấm dứt hợp đồng lao động. <span class="text-info">Biên bản hoặc thông báo xác nhận công việc đã hoàn thành có thể do “Nhân Kiệt” hoặc “Công ty khách hàng” ban hành hoặc xác lập bằng văn bản nội bộ có giá trị tương đương.</span></li>
+                                        <li>Người lao động cam kết khi nghỉ việc riêng, nghỉ không hưởng lương … thì phải xin phép (nộp đơn xin phép) nộp cho người quản lý/phụ trách trực tiếp, hoặc trên phần mềm Công ty. </li>
+                                        <li>Người lao động cam kết chấp hành lệnh điều hành sản xuất - kinh doanh, nội quy kỷ luật lao động, an toàn lao động; và cam kết Bồi thường vi phạm, bồi thường thiệt hại và trách nhiệm vật chất theo quy định.</li>
+                                        <li>Trong thời gian hiệu lực hợp đồng và trong vòng 12 tháng kể từ khi nghỉ việc tại Công ty, người lao động không được phép cung cấp thông tin, tiết lộ bí mật kinh doanh của công ty ra ngoài. Trường hợp bị phát hiện, cá nhân đó sẽ bị khởi tố trước pháp luật</li>
+                                    </ul>
+
+                                    <p><strong>Điều 10: Điều khoản thi hành. </strong></p>
+                                    <ul>
+                                        <li>Các phụ lục hợp đồng lao động, hoặc hợp đồng trách nhiệm vật chất, hoặc các cam kết của người lao động với “Nhân Kiệt” (nếu có) là phần không thể tách rời của hợp đồng lao động này. </li>
+                                        <li>Hợp đồng lao động được ký bởi 2 bên và có hiệu lực từ ngày <span t-field="o.date_start" />.</li>
+                                    </ul>
+
+                                    <div class="signature">
+                                        <div class="d-flex justify-content-between">
+                                            <div class="employee-sign text-center">
+                                                <p class="fs-6"><strong>Người lao động</strong></p>
+                                                <p><i>(Ký, ghi rõ họ và tên)</i></p>
+                                            </div>
+                                            <div class="represent-sign text-center">
+                                                <p class="fs-6"><strong>Người sử dụng lao động</strong></p>
+                                                <p><i>(Tổng Giám Đốc)</i></p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <!-- <p><strong>Contract End Date:</strong> <span t-field="o.date_end"/></p>
-                                <p><strong>Salary:</strong> <span t-field="o.wage"/></p> -->
                             </div>
                         </div>
-                    </t>
-                    <footer>
-                        <div class="footer">
-                            <p>Powered by My Company</p>
-                        </div>
-                    </footer>
-                </div>
-            </t>
+                    </div>
+                </t>
+            </div>
         </t>
     </template>
 </odoo>

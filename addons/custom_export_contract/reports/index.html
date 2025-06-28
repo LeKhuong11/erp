@@ -1,30 +1,157 @@
+<!-- <t t-call="web.html_container">
+    <div class="container">
+        <t t-if="first">
+            <header>
+                <div class="header">
+                    <div class="header-content d-flex justify-content-between align-items-center">
+                        <div class="logo ">
+                            <img t-att-src="'/custom_export_contract/static/src/images/logo-nk.jpg'" style="width: 135px;"/>
+                        </div>
+                        <div>
+                            <h2 class="fs-4">CÔNG TY TNHH CUNG ỨNG NHÂN LỰC NHÂN KIỆT</h2>
+                            <p class="text-left fs-5">Số 57 Lê Thị Hồng Gấm, P. Nguyễn Thái Bình, Quận 1, TP. HCM</p>
+                            <div class="d-flex justify-content-between">
+                                <p><strong class="text-decoration-underline">Email:</strong> <span>info@nhankiet.vn</span></p>
+                                <p><strong class="text-decoration-underline">Website:</strong> <span>www.nhankiet.vn</span></p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <p><strong class="text-decoration-underline">Tel:</strong> <span>028.3505 4224</span></p>
+                                <p><strong class="text-decoration-underline">VP HCM:</strong> <span>028.3821 3955</span></p>
+                                <p><strong class="text-decoration-underline">VP Hà Nội:</strong> <span>024.3763 3119</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-title d-flex justify-content-center mt-3">
+                        <div class="text-center">
+                            <h2 class="fs-4">HỢP ĐỒNG LAO ĐỘNG</h2>
+                            <p>Số: <span>654668879</span></p>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+            </header>
+        </t>
+        
+        <t t-foreach="docs" t-as="o">
+            <div class="container">
+                <t t-call="web.external_layout">
+                    <div class="contract-report">
+                        <div class="page">
+                            <div class="represent mb-3">
+                                <h2>CÔNG TY TNHH CUNG ỨNG NHÂN LỰC NHÂN KIỆT</h2>
+                                <h2>(Gọi tắt là "Nhân Kiệt")</h2>
+                                <p><strong>Địa chỉ:</strong> <span>Địa chỉ : 57 Lê Thị Hồng Gấm, P. Nguyễn Thái Bình, Quận 1, Hồ Chí Minh</span></p>
+                                <div class="d-flex">
+                                    <p><strong>Người đại diện:</strong> <span>Đỗ Huy Lê</span></p>
+                                    <p class="px-4"><strong>Chức vụ:</strong> <span>Tổng giám đốc</span></p>
+                                </div>
+                                <p><strong class="text-danger">Giấy ủy quyền số:</strong> <span>Công ty TNHH Cung Ứng Nhân Lực Nhân Kiệt</span></p>
+                            </div>  
+                            <div class="employee">
+                                <div class="d-flex">
+                                    <p><strong>NGƯỜI LAO ĐỘNG</strong>: <span t-field="o.employee_id.name"/></p>
+                                    <p class="px-4">Quốc tịch: <span t-field="o.employee_id.country_id.name"/></p>
+                                </div>
+                                <div class="d-flex">
+                                    <p>Năm sinh: <span t-field="o.employee_id.birthday"/></p>
+                                    <p class="px-4">Giới tính: <span t-field="o.employee_id.gender"/></p>
+                                </div>
+                                <p>Địa chỉ thường trú: <span t-field="o.employee_id.permanent_address"/></p>
+                                <p>Số CMND/CCCD/HC: <span t-field="o.employee_id.cccd" />. Ngày: <span t-field="o.employee_id.issue_date_id_card"/>. Tại: <span t-field="o.employee_id.issue_place_id_card"/></p>
+                                <p>Hai bên cùng thoả thuận ký kết <span class="text-blue">hợp đồng lao động</span> một dạng hợp đồng mà Người lao động làm việc và chịu sự quản lý, điều hành bởi <span class="text-blue">Công ty khách hàng</span> theo hợp đồng <span class="text-danger" t-field="o.name" /> ký với người sử dụng lao động với những điều khoản sau đây:</p>
+                                <p><strong>Điều 1: Thời hạn của hợp đồng lao động; Công việc và địa điểm làm việc: </strong></p>
+                                <ul>
+                                    <li>Thời hạn hợp đồng: xác định thời hạn từ ngày: <span t-field="o.date_start"/> đến ngày: <span t-field="o.date_end"/></li>
+                                    <p class="text-info">Tuy nhiên, hợp đồng có thể được chấm dứt trước thời hạn khi công việc đã hoàn thành, theo quy định tại Khoản 2 Điều 34 Bộ luật Lao động 2019. </p>
+                                    <li>Địa điểm làm việc: Tại <span t-field="o.employee_id.company_id.name"/> hoặc Văn Phòng Đại Diện của Nhân Kiệt.</li>
+                                    <li class="text-info">Công việc phải làm:  Theo nội dung công việc <span t-field="o.job_id.name"/> được Nhân Kiệt phân công nhằm phục vụ cho dự án hoặc hợp đồng dịch vụ cụ thể giữa Nhân Kiệt và <span t-field="o.employee_id.company_id.name"/>.</li>
+                                </ul>
+                                <p class="text-info"><strong>Tiêu chí xác định công việc đã hoàn thành bao gồm một trong các trường hợp sau: </strong></p>
+                                <p class="text-info">(i) <span t-field="o.employee_id.company_id.name"/> có <strong>văn bản hoặc thông báo</strong> xác nhận đã kết thúc công việc, dự án, hoặc chấm dứt hợp đồng dịch vụ tại vị trí mà người lao động đang đảm nhận;</p>
+                                <p class="text-info">(ii) Người lao động đã <strong>hoàn tất toàn bộ nhiệm vụ, nội dung công việc được phân công</strong> theo kế hoạch công việc ban đầu.</p>
+                                
+                                <p><strong>Điều 2: Mức lương</strong></p>
+                                <ul>
+                                    <li>Lương cơ bản  <span class="text-danger" t-field="o.wage"/> đồng/tháng  (công chuẩn 26)</li>
+                                </ul>
+                                <p><strong>Điều 3: Phụ cấp khác theo tiết c2 điểm c khoản 5 Điều 3 của TT số 10/2020/TT-BLĐTBXH</strong></p>
+                                <p class="text-left">ĐVT: «DVT» (công chuẩn 26 ngày/tháng)</p>
+                                <table class="table table-sm table-bordered" style="width:100%">
+                                    <tbody>
+                                        <tr>
+                                            <td>PC đi lại(*)</td>
+                                            <td><span>500</span></td>
+                                            <td>Thưởng chuyên cần(*)</td>
+                                            <td><span>500</span></td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td>PC nhà ở(*)</td>
+                                            <td><span>500</span></td>
+                                            <td>Bảo hiểm trả vào lương</td>
+                                            <td><span>500</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>PC cơm(*)</td>
+                                            <td><span>500</span></td>
+                                            <td>PC điện thoại...</td>
+                                            <td><span>500</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Phép năm</td>
+                                            <td><span>500</span></td>
+                                            <td>Khác(*)...</td>
+                                            <td><span>500</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lương tháng 13</td>
+                                            <td><span>500</span></td>
+                                            <th><strong>Tổng phụ cấp: </strong></th>
+                                            <th><span>5.125.000</span></th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <ul>
+                                    <li>Ghi chú: Tiền chuyên cần và các loại phụ cấp khác được đánh dấu (*) có thể sẽ không nhận đủ nếu người lao động có nghỉ không hưởng lương; Mức không được hưởng cho mỗi ngày nghỉ không hưởng là «Ty_Le_tru» của <span>9.056.000 VNĐ</span> </li>
+                                    <li>Hình thức trả lương: Chuyển khoản ngày 10; Tiền mặt ngày 15 nếu rơi vào ngày Chủ Nhật, ngày nghỉ thì tiền lương sẽ chuyển vào ngày làm việc liền sau đó. </li>
+                                    <li>Chế độ nâng bậc, nâng lương: Áp dụng khi khách hàng tăng cho người lao động. </li>
+                                </ul>
+
+                                <p><strong>Điều 4:  Thời giờ làm việc, thời giờ nghỉ ngơi</strong></p>
+                                <ul>
+                                    <li>Thời giờ làm việc tiêu chuẩn: «GioCongChuan», «CongChuan».</li>
+                                    <li>Chế độ nghỉ ngơi: Ngày nghỉ hàng tuần được nghỉ luân phiên theo lịch phân ca, ngày nghỉ hàng tuần không bắt buộc là ngày Chủ Nhật nhưng đảm bảo nghỉ 4 ngày/tháng. Lịch nghỉ Lễ Tết theo quy định và sẽ có thông báo cho người lao động. </li>
+                                </ul>
+
+                                <p><strong>Điều 5: Trang bị bảo hộ lao động, đồng phục, công cụ dụng cụ</strong></p>
+                                <ul>
+                                    <li>Người lao động được trang bị đồng phục miễn phí theo yêu cầu công việc, người lao động bắt buộc phải tuân thủ quy định về an toàn lao động và sử dụng trang thiết bị bảo hộ lao động tại nơi làm việc. Khi kết thúc công việc hoặc chấm dứt hợp đồng, người lao động được yêu cầu trả đồng phục, bảo hộ lao động, công cụ, dụng cụ, trang thiết bị được giao; nếu không phải bồi thường cho “Nhân Kiệt” hoặc “Công ty khách hàng”</li>
+                                    <li>Theo từng công việc, công cụ, dụng cụ sẽ được phân phát cụ thể, Người lao động có trách nhiệm quản lý, sử dụng đúng mục đích của công cụ dụng cụ. </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+                <footer>
+                    <div class="footer">
+                        <p>Powered by My Company</p>
+                    </div>
+                </footer>
+            </div>
+        </t>
+    </div>
+</t> -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="custom_addons/custom_export_contract/static/src/css/style.scss">
 </head>
 <body>
-    <div class="container contract-report">
-        <header>
-            <div class="header">
-                <h2 style="font-family: 'Times New Roman', Times, serif;">CÔNG TY TNHH CUNG ỨNG NHÂN LỰC NHÂN KIỆT</h2>
-                <p>Số 57 Lê Thị Hồng Gấm, P. Nguyễn Thái Bình, Quận 1, TP. HCM</p>
-                <div>
-                    <p><strong>Email:</strong> <span>info@nhankiet.vn</span></p>
-                    <p><strong>Tel:</strong> <span>028.3505 4224</span></p>
-                </div>
-            </div>
-            <hr />
-        </header>
-
-        <footer>
-            <div class="footer">
-                <p>Powered by My Company</p>
-            </div>
-        </footer>
-    </div>
+    <h2 style="color: red; font-family: Arial, sans-serif;">CÔNG TY TNHH CUNG ỨNG NHÂN LỰC NHÂN KIỆT 123</h2>
 </body>
 </html>

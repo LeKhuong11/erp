@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0 30px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .container {
@@ -14,32 +15,38 @@ body {
 }
 
 
-.header {
-    margin: 0;
-    padding: 0;
+.header-section {
+    margin: 0 auto;
+    width: 85%;
+    padding-bottom: 10px;
 
     .header-content {
         text-align: center;
-        border-bottom: #c20e37 solid 2px;
+        border-bottom: #8e0911 solid 2.5px;
 
         h2 {
-            font-size: 20px;
-            text-align: center;
-            color: #c20e37;
-            font-weight: 700;
-            margin: 0;
+            font-size: 22px;
+            text-align: left;
+            color: #c0002a;
+            font-weight: 800;
+            // font-family: Arial, Helvetica, sans-serif;
         }
 
         p {
             font-size: 14px;
             color: #1f008f;
             margin: 0;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .font-weight-bold {
+            font-weight: bold;
         }
     }
 
     .header-title {
         h2, span {
-            font-family: 'Times New Roman', Times, serif;
             color: #3333ff;
             font-weight: 600;
             margin: 0;
@@ -49,38 +56,34 @@ body {
 }
 
 
-.contract-report {
-    .page {
-        margin: 0 -60px;
-    }
+.page {
+    margin: 0 -40px;
+    // font-family: 'Times New Roman', Times, serif;
 
-    .page h2 {
-        font-size: 17px;
+
+    h2 {
+        font-size: 19px;
         font-weight: 600;
         margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
     }
 
-    .page p {
-        font-size: 15px;
-        margin: 1px 0;
-        font-family: Arial, Helvetica, sans-serif;
+    p {
+        font-size: 17px;
+        margin: 0;
     }
 
-    .represent {
-
+    .signature {
+        width: 70%;
+        margin: 20px auto 0;
     }
 
-    .employee {
-
-    }
 }
 
 
-    .footer {
-        text-align: center;
-        font-size: 12px;
-        color: gray;
-        margin-top: 20px;
-        position: relative;
-    }
+.footer {
+    text-align: center;
+    font-size: 12px;
+    color: gray;
+    margin-top: 20px;
+    position: relative;
+}
